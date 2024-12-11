@@ -1,0 +1,27 @@
+# Anexo II {.unnumbered}
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE, echo=FALSE, fig.pos="H", 
+                      fig.path="./img-modelagem/",
+                      fig.align = "center", dev = "png", dpi = 600, 
+                      out.width = "80%", warning = FALSE, message = FALSE,
+                      size = "small")
+library(ggplot2)
+library(ggthemes)
+theme_set(theme_bw())
+library(appraiseR)
+library(knitr)
+```
+
+```{r}
+M <- matrix(nrow = 60, ncol = 10)
+for (t in 1:60) {
+  for (i in 1:10){
+    M[t,i] <- i/100*(1+i/100)^t/((1+i/100)^t-1)
+  }
+}
+frc <- as.data.frame(M)
+colnames(frc) <- c("1%", "2%", "3%", "4%", "5%", "6%", "7%", "8%", "9%", "10%")
+frc |>
+  kable(digits = 4, row.names = T)
+```

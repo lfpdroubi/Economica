@@ -1,0 +1,2065 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>4&nbsp; Avaliação de Aluguéis – Engenharia Econômica e Avaliação de Aluguéis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./notas.html" rel="next">
+<link href="./economica.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./alugueis.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Avaliação de Aluguéis</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Engenharia Econômica e Avaliação de Aluguéis</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefácio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./financeira.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Matemática Financeira</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./economica.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Engenharia Econômica</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./alugueis.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Avaliação de Aluguéis</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Considerações Finais</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./anexo_I.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Anexo I</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./anexo_II.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Anexo II</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#o-método-da-renda" id="toc-o-método-da-renda" class="nav-link active" data-scroll-target="#o-método-da-renda"><span class="header-section-number">4.1</span> O Método da Renda</a>
+  <ul class="collapse">
+  <li><a href="#taxa-de-rentabilidade" id="toc-taxa-de-rentabilidade" class="nav-link" data-scroll-target="#taxa-de-rentabilidade"><span class="header-section-number">4.1.1</span> Taxa de rentabilidade</a></li>
+  </ul></li>
+  <li><a href="#o-método-da-remuneração-do-capital" id="toc-o-método-da-remuneração-do-capital" class="nav-link" data-scroll-target="#o-método-da-remuneração-do-capital"><span class="header-section-number">4.2</span> O Método da remuneração do capital</a></li>
+  <li><a href="#estratégias-de-investimento-em-imóveis" id="toc-estratégias-de-investimento-em-imóveis" class="nav-link" data-scroll-target="#estratégias-de-investimento-em-imóveis"><span class="header-section-number">4.3</span> Estratégias de investimento em imóveis</a>
+  <ul class="collapse">
+  <li><a href="#exemplo" id="toc-exemplo" class="nav-link" data-scroll-target="#exemplo"><span class="header-section-number">4.3.1</span> Exemplo</a></li>
+  <li><a href="#conclusão" id="toc-conclusão" class="nav-link" data-scroll-target="#conclusão"><span class="header-section-number">4.3.2</span> Conclusão</a></li>
+  </ul></li>
+  <li><a href="#método-da-renda-e-método-evolutivo" id="toc-método-da-renda-e-método-evolutivo" class="nav-link" data-scroll-target="#método-da-renda-e-método-evolutivo"><span class="header-section-number">4.4</span> Método da Renda e Método Evolutivo</a>
+  <ul class="collapse">
+  <li><a href="#exemplo-1" id="toc-exemplo-1" class="nav-link" data-scroll-target="#exemplo-1"><span class="header-section-number">4.4.1</span> Exemplo</a></li>
+  </ul></li>
+  <li><a href="#coeficiente-de-aproveitamento" id="toc-coeficiente-de-aproveitamento" class="nav-link" data-scroll-target="#coeficiente-de-aproveitamento"><span class="header-section-number">4.5</span> Coeficiente de Aproveitamento</a>
+  <ul class="collapse">
+  <li><a href="#coeficiente-de-aproveitamento-clássico" id="toc-coeficiente-de-aproveitamento-clássico" class="nav-link" data-scroll-target="#coeficiente-de-aproveitamento-clássico"><span class="header-section-number">4.5.1</span> Coeficiente de aproveitamento clássico</a></li>
+  <li><a href="#efeitos-da-idade-e-do-padrão-de-construção-existente-sobre-o-aproveitamento-efetivo-do-terreno" id="toc-efeitos-da-idade-e-do-padrão-de-construção-existente-sobre-o-aproveitamento-efetivo-do-terreno" class="nav-link" data-scroll-target="#efeitos-da-idade-e-do-padrão-de-construção-existente-sobre-o-aproveitamento-efetivo-do-terreno"><span class="header-section-number">4.5.2</span> Efeitos da idade e do padrão de construção existente sobre o aproveitamento efetivo do terreno</a></li>
+  <li><a href="#cálculo-do-valor-locatício-de-unidades-autônomas" id="toc-cálculo-do-valor-locatício-de-unidades-autônomas" class="nav-link" data-scroll-target="#cálculo-do-valor-locatício-de-unidades-autônomas"><span class="header-section-number">4.5.3</span> Cálculo do valor locatício de unidades autônomas</a></li>
+  </ul></li>
+  <li><a href="#mcddm" id="toc-mcddm" class="nav-link" data-scroll-target="#mcddm"><span class="header-section-number">4.6</span> O Método Comparativo</a></li>
+  <li><a href="#método-da-renda-vs.-método-comparativo" id="toc-método-da-renda-vs.-método-comparativo" class="nav-link" data-scroll-target="#método-da-renda-vs.-método-comparativo"><span class="header-section-number">4.7</span> Método da Renda vs.&nbsp;Método Comparativo</a></li>
+  <li><a href="#exemplo-4" id="toc-exemplo-4" class="nav-link" data-scroll-target="#exemplo-4"><span class="header-section-number">4.8</span> Exemplo</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Avaliação de Aluguéis</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>As avaliações de aluguéis geralmente são realizadas ora utilizando o método da remuneração do capital (que, como veremos, é nada mais do que o inverso do método da renda), ora utilizando o método comparativo direto.</p>
+<p>Em essência, a diferença entre os dois métodos encontra-se na forma de olhar para os imóveis. No caso do método da remuneração do capital, analisa-se o imóvel como um bem de investimento. No caso do método comparativo, o imóvel é analisado como um bem de consumo.</p>
+<section id="o-método-da-renda" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="o-método-da-renda"><span class="header-section-number">4.1</span> O Método da Renda</h2>
+<p>O Método da Renda é muito aplicado na avaliação dos valores de venda de imóveis urbanos, especialmente aqueles destinados à implantação de empreendimentos como hotéis e outros empreendimentos de base imobiliária. O método da renda, quando aplicado inversamente, ou seja, quando aplicado para o cálculo do valor dos aluguéis a partir de valores de venda conhecidos, é também chamado de método da remuneração do capital. Tal método é um dos mais utilizados na avaliação de aluguéis. No entanto, apesar de ser intuitivo e de fácil aplicação, as dificuldades relacionadas ao estabelecimento apropriado da taxa de rentabilidade, e outras tantas que serão discutidas ao longo deste capítulo, tornam-no um método complexo e muitas vezes duvidoso.</p>
+<p>O objetivo do Método da Remuneração do Capital (MRC) é a obtenção do valor do aluguel através da aplicação de uma taxa de rentabilidade ao valor de venda do imóvel, supostamente conhecido<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Se o valor de mercado do imóvel <span class="math inline">\(V_{venda}\)</span> é conhecido, o valor do aluguel (<span class="math inline">\(V_{aluguel}\)</span>) é estimado através da seguinte expressão, baseada numa taxa de rentabilidade <span class="math inline">\(i\)</span>:</p>
+<p><span class="math display">\[V_{aluguel}=V_{venda}*i\]</span></p>
+<p>A taxa de rentabilidade a ser aplicada ao imóvel depende de fatores físicos (tais como a tipologia do imóvel), econômicos (como a conjuntura econômica) e outros até subjetivos (como a taxa de risco a ser definida pelo avaliador, em comum acordo ou não com o seu contratante).</p>
+<section id="taxa-de-rentabilidade" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="taxa-de-rentabilidade"><span class="header-section-number">4.1.1</span> Taxa de rentabilidade</h3>
+<p>É usual que para a obtenção da taxa de rentabilidade total do imóvel esta seja decomposta em duas partes: taxa de rentabilidade do terreno (<span class="math inline">\(i_i\)</span>) e taxa de rentabilidade das benfeitorias (<span class="math inline">\(i_b\)</span>). Estas, por sua vez, também podem ser decompostas em outros componentes, como pode ser visto no quadro abaixo:</p>
+<table class="caption-top table">
+<caption>Exemplo de Composição das taxas do terreno e das benfeitorias</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: right;">Terreno</th>
+<th style="text-align: right;">Benfeitorias</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Taxa básica</td>
+<td style="text-align: right;">6,0%</td>
+<td style="text-align: right;">6,0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Não-liquidez</td>
+<td style="text-align: right;">1,5%</td>
+<td style="text-align: right;">1,5%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Valorização</td>
+<td style="text-align: right;">-1,5%</td>
+<td style="text-align: right;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Depreciação</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">2,0%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Vacância</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">1,0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>TOTAL</strong></td>
+<td style="text-align: right;"><strong>6,0%</strong></td>
+<td style="text-align: right;"><strong>10,5%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Uma vez conhecida as taxas de remuneração do terreno e das benfeitorias, pode-se calcular a taxa de remuneração total do imóvel, a partir da seguinte expressão <span class="citation" data-cites="damato">(<a href="references.html#ref-damato" role="doc-biblioref">D’Amato and Alonso 2019, 86</a>)</span>:</p>
+<p><span class="math display">\[i = \frac{V_t i_t + V_b i_b}{Vt + Vb}\]</span></p>
+<p>Deve-se ter em mente sempre que a taxa global obtida com a expressão acima somente deve ser aplicada àquele imóvel em específico, já que a taxa global varia conforme a divisão do valor do imóvel entre terra e benfeitoria. Assim, pode ser mais fácil não calcular a taxa composta e aplicar diretamente a taxa correspondente a cada parte do capital.</p>
+<section id="justificativas-dos-componentes-da-taxa-de-rentabilidade" class="level4" data-number="4.1.1.1">
+<h4 data-number="4.1.1.1" class="anchored" data-anchor-id="justificativas-dos-componentes-da-taxa-de-rentabilidade"><span class="header-section-number">4.1.1.1</span> Justificativas dos componentes da taxa de rentabilidade</h4>
+<p>Os compontentes da taxa de rentabilidade apresentados na tabela acima se justificam da seguinte maneira:</p>
+<ol type="1">
+<li><p>Taxa básica: esta taxa se justifica pela existência de outras aplicações no mercado financeiro que competem com o investimento em imóveis. Se, por exemplo, existem aplicações disponíveis no mercado financeiro que propiciem segurança e rentabilidade de longo prazo de 6,0% a.a., esta taxa deverá ser considerada como a taxa básica.</p></li>
+<li><p>Não-liquidez: este componente se justifica devido à perda de liquidez que o investimento em imóveis acarreta para o investidor. Se, por exemplo, o investidor tem acesso a oportunidades de investimento que propiciem segurança e rentabilidade de longo prazo de 6% a.a., assim como uma alta liquidez, o investidor deve requerer uma compensação pela perda de liquidez que justifique a aplicação dos seus recursos no mercado imobiliário.</p></li>
+<li><p>Valorização: este componente se justifica devido à expectativa de valorização que pode estar embutida no valor dos imóveis, em especial ao valor da terra. Em condições usuais (<em>i.e.</em> em que os custos reais de construção permaneçam praticamente estáveis), as benfeitorias tendem apenas a se depreciar, portanto não é usual a aplicação de uma taxa de valorização a este componente do valor dos imóveis.</p></li>
+<li><p>Depreciação: a depreciação se aplica somente ao componente benfeitoria, sendo absurda a sua aplicação ao componente terra. Deve-se ter coerência na escolha da taxa de depreciação, levando em conta a tipologia do imóvel, assim como os materiais utilizados para sua construção e seu padrão de acabamento.</p></li>
+<li><p>Vacância: diz respeito ao risco de vacância de um determinado investimento imobiliário. Por exemplo, se ao construir lojas com fins de locação se espera uma taxa de vacância destas lojas de 1,0% a.a., aplica-se este valor às benfeitorias apenas. Por que não aplicar a taxa de vacância ao imóvel como um todo? A explicação é que a terra estaria vaga de qualquer maneira sem os investimentos na construção das benfeitorias. Assim, a vacância é um risco que se aplica ao investimento na construção destas benfeitorias, mas não ao terreno, que não deixa de se valorizar e não perde valor com o tempo, mesmo quando está sem uso.</p></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="o-método-da-remuneração-do-capital" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="o-método-da-remuneração-do-capital"><span class="header-section-number">4.2</span> O Método da remuneração do capital</h2>
+<p>O método da remuneração do capital é o método utilizado para se obter o valor do aluguel a partir da aplicação de uma taxa de rentabilidade ao valor de venda do imóvel. Assim, o método da remuneração do capital é o inverso do método da renda, esse último mais conhecido, em que a partir do conhecimento da renda que pode ser obtida de um imóvel ao longo de um horizonte de tempo, essa renda é descontada a uma determinada taxa de rentabilidade para obtenção do valor presente ou valor de mercado do imóvel.</p>
+<p>Existem dúvidas acerca de qual taxa de rentabilidade aplicar, como explicado na última seção. No entanto, estas não são as únicas fraquezas do método. Como vimos no capítulo (renda), no preço dos imóveis pode estar embutido uma renda implícita decorrente de sua expectativa de valorização (quarta renda). Esta renda, na prática, não pode ser observada diretamente, o que dificulta a aplicação do método.</p>
+<p>Como visto no capítulo (renda), na hipótese do mercado imobiliário encontrar-se perfeitamente equilibrado, <em>i.e.</em> com os preços refletindo tão e somente os fundamentos econômicos, sem sobrepreços em relação ao valor esperado descontado do fluxo de rendimentos, o valor de um imóvel pode ser assim calculado <span class="citation" data-cites="Malpezzi2002TheRO">(<a href="references.html#ref-Malpezzi2002TheRO" role="doc-biblioref">Malpezzi and Wachter 2002</a>)</span>:</p>
+<p><span class="math display">\[V_{Imovel} \approx \frac{\mathbb{E}[R_l]}{i}\]</span></p>
+<p>Dessa forma, seria relativamente fácil descobrir o valor justo para o aluguel líquido do imóvel (<span class="math inline">\(R_l\)</span>) baseado em uma taxa de rentabilidade <span class="math inline">\(i\)</span> devidamente fundamentada aplicada ao valor de mercado do imóvel (<span class="math inline">\(V_{Imovel}\)</span>).</p>
+<p>No entanto, caso o mercado esteja sobrevalorizando os imóveis e a expectativa do mercado seja que esta sobrevalorização aumente com o tempo, como prevê <span class="citation" data-cites="BLANCHARD1979">Blanchard (<a href="references.html#ref-BLANCHARD1979" role="doc-biblioref">1979</a>)</span>, então o valor do imóvel no período <span class="math inline">\(t\)</span> será:</p>
+<p><span class="math display">\[V_t = V_t^*+b_t; \qquad \mathbb{E}[b_t] = (1+i)b_t\]</span></p>
+<p>Nestas situações, portanto, o imóvel está produzindo uma renda implícita, ou seja, uma renda relacionada à expectativa de sua valorização. Isto explica porque um proprietário pode estar disposto a manter um imóvel sem uso (retenção especulativa <span class="citation" data-cites="lacerda2020">(<a href="references.html#ref-lacerda2020" role="doc-biblioref">Lacerda and Abramo 2020</a>)</span>), ou seja, sem produzir qualquer tipo de renda explícita, por um determinado período de tempo, até que seja conveniente a sua alienação ou qualquer outra destinação que lhe seja apropriada.</p>
+<p>Da mesma maneira, o proprietário de um imóvel pode vir a aceitar locar o seu imóvel a uma taxa de rentabilidade inferior (ou mesmo muito inferior) às taxas de rentabilidade dos outros investimentos disponíveis, haja vista ele está esperando uma rentabilidade também em relação ao aumento do valor de venda do imóvel<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<p>Nestas situações, o método comparativo de dados de mercado deve ser mais preciso na determinação dos aluguéis.</p>
+<p>No entanto, sugere-se que o modelo de <span class="citation" data-cites="BLANCHARD1979">Blanchard (<a href="references.html#ref-BLANCHARD1979" role="doc-biblioref">1979</a>)</span> pode ser levemente alterado para permitir a aproximação do valor do aluguel pelo método da remuneração do capital mesmo em situações em que o mercado esteja sobrevalorizando o valor dos imóveis. Imagine que o mercado esteja sobrevalorizando os imóveis em um determinado período <span class="math inline">\(t\)</span> a uma determinada razão de <span class="math inline">\(b_t/100\)</span> (<span class="math inline">\(b_t&gt;100\)</span>) e que haja expectativa de aumento contínuo desta sobrevalorização, conforme expressão abaixo:</p>
+<p><span class="math display">\[V_t = b_tV_t^*; \qquad \mathbb{E}[b_t] = (1+i)b_t\]</span></p>
+<p>Por exemplo, se a taxa de valorização real de longo prazo de 0,4% a.a. observada para os imóveis residenciais unifamiliares nos EUA (casas) puder ser considerada correta, partindo-se de uma conjuntura em que o mercado imobiliário esteja perfeitamente equilibrado (<span class="math inline">\(b_t = 1\)</span>), considerando-se uma taxa de rentabilidade básica de 3% a.a., tería-se:</p>
+<table class="caption-top table">
+<caption>Composição das taxas do rentabilidade para as casas nos EUA.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Tipo</th>
+<th style="text-align: right;">Terreno</th>
+<th style="text-align: right;">Benfeitorias</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Taxa básica</td>
+<td style="text-align: right;">3,0%</td>
+<td style="text-align: right;">3,0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Vacância</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">1,0%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Outras</td>
+<td style="text-align: right;">-0,4%</td>
+<td style="text-align: right;">-0,4%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>TOTAL</strong></td>
+<td style="text-align: right;"><strong>2,6%</strong></td>
+<td style="text-align: right;"><strong>3,6%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Considerando-se uma composição no valor final das casas de 50% para o valor do terreno e 50% para o valor das benfeitorias (válida para os bairros mais consolidados, onde a terra é relativamente mais cara), tem-se:</p>
+<p><span class="math display">\[i = 0,5 i_t + 0,5 i_b = 0,5.2,6\% + 0,5.3,6\% = 3,1\%\, \text{a.a.}\]</span></p>
+<p>Desta maneira, partindo-se de um imóvel com valor de venda hipotético de US$500.000,00, ter-se-ia que o valor justo para o seu aluguel seria:</p>
+<p><span class="math display">\[Al = V_{Imovel}.i = 500.000\frac{3,1}{100} = 15.500\text{/ano} \approx 1.300 \text{/mês}\]</span></p>
+<p>Deve-se reparar que o investidor desatento, ao se deparar com um imóvel locado ao valor de R$ 1.300,00 mensais, com valor de venda de R$ 500.000,00, poderá incorretamente entender que a rentabilidade do imóvel está abaixo do mercado. Pois esse investidor, ao desconsiderar o potencial de valorização do imóvel de 0,4% a.a., considerando apenas a taxa de vacância e a taxa básica, chegará a uma taxa de capitalização de 3,5% a.a. Assim, este investidor iria considerar que o valor real de venda do imóvel, calculado através do método da renda, deveria ser de:</p>
+<p><span class="math display">\[V_{Imovel} = 12\frac{1300}{3,5\%} \approx 445.000,00 \]</span></p>
+<p>Desta forma o investidor pode estar deixando de fazer um bom negócio por não ter enxergado que existe embutido no valor de venda de um imóvel uma quarta renda embutida, ou seja, a renda que deve ser advinda da expectativa de valorização do imóvel com o tempo.</p>
+</section>
+<section id="estratégias-de-investimento-em-imóveis" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="estratégias-de-investimento-em-imóveis"><span class="header-section-number">4.3</span> Estratégias de investimento em imóveis</h2>
+<p>Os investidores que atuam no mercado imobiliário usualmente adotam diferentes estratégias de investimento. Assim como em outros mercados, como o mercado de ações, no mercado imobiliário existem investidores que adotam estratégias como a conhecida estratégia de <em>buy &amp; hold</em>, <em>i.e.</em> comprar um imóvel e mantê-lo em carteira, com fins de auferir retorno em longo prazo, assim como investidores mais afoitos, atuando com o objetivo de obter retornos em curto e médio prazo, muitas vezes chamados de especuladores.</p>
+<p>Nos mercados eficientes os especuladores podem ter um papel benéfico ao bom funcionamento dos mercados: comprando e vendendo ativos, os especuladores atuam no sentido de atenuar os ciclos de valorização/desvalorização, fornecendo maior estabilidade aos preços, assim como propiciando maior liquidez aos mercados. No mercado imobiliário, no entanto, diferentemente do que ocorre no mercado de ações, não é possível ao especulador manter uma posição vendida em ativos (<em>short</em>), o que é comum no mercado de ações, onde o investidor pode manter uma posição vendida por um grande período de tempo, ou seja, o investidor vende no mercado um ativo que ele não tem, e mantém essa posição enquanto ele entender que o ativo está sobrevalorizado. Uma vez que o ativo tive voltado ao seu valor de mercado, o investidor desfaz a operação, “recomprando” aquele ativo que ele não tinha, ficando líquido. Este tipo de operação nas bolsas de valores, teoricamente, ajuda a atenuar as sobrevalorizações de ativos que fatalmente ocorrem nos <em>bull markets</em> (conjuntura de mercado em que há grande expectativa de valorização e os preços da maioria dos ativos estão num ciclo de alta, alguns acima dos seus fundamentos). Como esta posição vendida não é possível nos mercados imobiliários, não há outros freios nestes mercados a serem aplicados durante os ciclos de alta que não sejam aqueles freios regulatórios, ou seja, os freios utilizados pelas entidades governamentais no sentido de esfriar os mercados, como elevação de taxas de juros, diminuição dos prazos de financiamento, etc.</p>
+<p>Os investidores de longo prazo do mercado imobiliário, portanto, devem ter maior preocupação com a rentabilidade dos imóveis, ou seja, sua capacidade de gerar renda (aluguéis). Já os investidores de curto e médio prazo no mercado imobiliário podem estar menos preocupados com a renda efetiva realmente produzida pelos imóveis, ou seja, são investidores que procuram ganhar com as negociações dos imóveis (compra e venda) e não com a rentabilidade de aluguéis. Assim, para estes investidores, o aluguel pode ser apenas uma forma de evitar o pagamento de taxas durante o período em que eles mantém os imóveis em carteira. Em outra palavras, ao alugar os imóveis em carteira, os investidores de curto e médio prazo do mercado imobiliário estarão evitando custos de carregamento como o pagamento de taxas de condomínio, IPTU, etc., já que estas taxas, enquanto o imóvel está locado, correm por conta do locatário. Assim o investidor pode focar apenas nas suas operações de entrada (compra) e saída (venda) dos ativos.</p>
+<p>Por exemplo, imagine que um investidor, ao se deparar com um mercado fraco para os imóveis, procure comprar apartamentos de um dormitório (<em>studios</em>) com expectativa de venda em alguns anos, quando o mercado imobiliário voltar a se aquecer. O investidor adquire algumas unidades ao preço médio de R$ 350.000,00, já inclusos neste valor o pagamento dos tributos (ITBI, custos cartoriais, etc). A taxa média de inflação da economia é de 3,75% a.a. (~0,30% a.m.) e os custos mensais para o locador para o carregamento do imóvel (o que inclui a sua manutenção, assim como o pagamento de taxas obrigatoriamente pagas pelo locador, como o fundo de reserva) seja em torno de R$ 350,00 (0,1% a.m.). Este investidor pode optar por alugar os seus imóveis em troca de um aluguel mínimo (líquido) de R$ 1.425,00 ao mês, que é suficiente tanto para cobrir as despesas obrigatórias do locador/investidor, assim como para efetuar a atualização monetária do seu capital. Desta forma o investidor irá auferir lucro caso o valor médio de venda dos seus imóveis, após certo período de tempo, for nominalmente superior ao preço médio de compra, de R$ 350.000,00. Em suma, não há necessidade de o investidor controlar os preços no tempo, pois a atualização monetária e o pagamento dos custos de carregamento já são feitos através do aluguel.</p>
+<p>Este simples exemplo ilustra como podem ser enganosos os cálculos de rentabilidade feitos pelos investidores desatentos, como a comparação da rentabilidade da locação com as taxas de curto prazo dos títulos públicos, por exemplo. Enquanto os imóveis podem ser valorizar no tempo, os títulos públicos de curto prazo estão sujeitos ao efeito corrosivo da inflação. Outro benefício do investimento em imóveis é a questão tributária: enquanto nos títulos públicos haverá cobrança de imposto de renda sobre o valor integral de valorização dos títulos, pouco importando o efeito da inflação, nos imóveis o imposto de renda deverá ser aplicado apenas sobre o ganho de capital<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<section id="exemplo" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="exemplo"><span class="header-section-number">4.3.1</span> Exemplo</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 13%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 15%">
+<col style="width: 17%">
+<col style="width: 13%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Id</th>
+<th style="text-align: right;">Compra</th>
+<th style="text-align: right;">ITBI</th>
+<th style="text-align: right;">Outros</th>
+<th style="text-align: right;">Custo Total</th>
+<th style="text-align: right;">Aluguel líq.</th>
+<th style="text-align: right;">Rend. (%)</th>
+<th style="text-align: right;">Venda</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">290.603,2</td>
+<td style="text-align: right;">8.718,10</td>
+<td style="text-align: right;">2.906,03</td>
+<td style="text-align: right;">302.227,3</td>
+<td style="text-align: right;">1.418,16</td>
+<td style="text-align: right;">5,78</td>
+<td style="text-align: right;">338.173,6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">302.754,7</td>
+<td style="text-align: right;">9.082,64</td>
+<td style="text-align: right;">3.027,55</td>
+<td style="text-align: right;">314.864,8</td>
+<td style="text-align: right;">1.264,63</td>
+<td style="text-align: right;">4,93</td>
+<td style="text-align: right;">327.228,0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">287.465,6</td>
+<td style="text-align: right;">8.623,97</td>
+<td style="text-align: right;">2.874,66</td>
+<td style="text-align: right;">298.964,2</td>
+<td style="text-align: right;">1.170,97</td>
+<td style="text-align: right;">4,80</td>
+<td style="text-align: right;">360.624,5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">323.929,2</td>
+<td style="text-align: right;">9.717,88</td>
+<td style="text-align: right;">3.239,29</td>
+<td style="text-align: right;">336.886,4</td>
+<td style="text-align: right;">876,51</td>
+<td style="text-align: right;">3,17</td>
+<td style="text-align: right;">386.662,5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">304.942,6</td>
+<td style="text-align: right;">9.148,28</td>
+<td style="text-align: right;">3.049,43</td>
+<td style="text-align: right;">317.140,3</td>
+<td style="text-align: right;">1.139,93</td>
+<td style="text-align: right;">4,40</td>
+<td style="text-align: right;">364.454,6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">287.693,0</td>
+<td style="text-align: right;">8.630,79</td>
+<td style="text-align: right;">2.876,93</td>
+<td style="text-align: right;">299.200,7</td>
+<td style="text-align: right;">1.343,56</td>
+<td style="text-align: right;">5,52</td>
+<td style="text-align: right;">358.200,6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">307.311,4</td>
+<td style="text-align: right;">9.219,34</td>
+<td style="text-align: right;">3.073,11</td>
+<td style="text-align: right;">319.603,9</td>
+<td style="text-align: right;">1.735,84</td>
+<td style="text-align: right;">6,72</td>
+<td style="text-align: right;">380.667,8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">311.074,9</td>
+<td style="text-align: right;">9.332,25</td>
+<td style="text-align: right;">3.110,75</td>
+<td style="text-align: right;">323.517,9</td>
+<td style="text-align: right;">1.284,29</td>
+<td style="text-align: right;">4,87</td>
+<td style="text-align: right;">381.652,4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">308.636,7</td>
+<td style="text-align: right;">9.259,10</td>
+<td style="text-align: right;">3.086,37</td>
+<td style="text-align: right;">320.982,2</td>
+<td style="text-align: right;">1.431,65</td>
+<td style="text-align: right;">5,49</td>
+<td style="text-align: right;">383.878,3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">295.419,2</td>
+<td style="text-align: right;">8.862,58</td>
+<td style="text-align: right;">2.954,19</td>
+<td style="text-align: right;">307.235,9</td>
+<td style="text-align: right;">1.234,70</td>
+<td style="text-align: right;">4,93</td>
+<td style="text-align: right;">365.336,3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">322.676,7</td>
+<td style="text-align: right;">9.680,30</td>
+<td style="text-align: right;">3.226,77</td>
+<td style="text-align: right;">335.583,8</td>
+<td style="text-align: right;">904,56</td>
+<td style="text-align: right;">3,28</td>
+<td style="text-align: right;">387.172,5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">305.847,7</td>
+<td style="text-align: right;">9.175,43</td>
+<td style="text-align: right;">3.058,48</td>
+<td style="text-align: right;">318.081,5</td>
+<td style="text-align: right;">1.163,40</td>
+<td style="text-align: right;">4,48</td>
+<td style="text-align: right;">334.155,0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Verifica-se na tabela acima que alguns imóveis da carteira tem rendimento um pouco inferior e outros um rendimento um pouco superior à média. A taxa de rendimento efetiva total pode ser calculada através da razão entre a soma dos valores dos aluguéis líquidos e a soma dos valores totais despendidos pelo investidor na aquisição da unidade. Esta taxa, para o exemplo em questão, é de 4,84% a.a. Admitindo que esta rentabilidade seja suficiente para cobrir os custos de carregamento dos imóveis assim como atualizar monetariamente o capital investido, pode-se considerar qualquer excesso no preço de venda em relação ao custo total de aquisição como lucro.</p>
+<p>Assim, o lucro total com a venda das unidades para o investidor pode ser calculado através da razão entre a soma dos valores de venda destas unidades e a soma dos valores desembolsados pelo investidor para a sua aquisição, o que resulta em um lucro de 573.917,20. A taxa de lucro real da operação, portanto, é a razão deste lucro pelo custo total de aquisição, 15,13%.</p>
+<p>Deve-se salientar que o lucro assim calculado se refere ao lucro da estratégia como um todo e não ao lucro obtido isoladamente em cada unidade. Para calcular o lucro/prejuízo em cada unidade seria necessário conhecer outros dados, como o tempo decorrido entre a compra e a venda das unidades e o eventual lucro ou prejuízo que o carregamento de cada unidade causou, isoladamente<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 17%">
+<col style="width: 19%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Id</th>
+<th style="text-align: right;">Custo Total</th>
+<th style="text-align: right;">Aluguel líq.</th>
+<th style="text-align: right;">Rend. (%)</th>
+<th style="text-align: right;">Venda</th>
+<th style="text-align: right;">Lucro</th>
+<th style="text-align: right;">Lucro (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">302.227,3</td>
+<td style="text-align: right;">1.418,16</td>
+<td style="text-align: right;">5,78</td>
+<td style="text-align: right;">338.173,6</td>
+<td style="text-align: right;">35.946,30</td>
+<td style="text-align: right;">11,89</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">314.864,8</td>
+<td style="text-align: right;">1.264,63</td>
+<td style="text-align: right;">4,93</td>
+<td style="text-align: right;">327.228,0</td>
+<td style="text-align: right;">12.363,17</td>
+<td style="text-align: right;">3,93</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">298.964,2</td>
+<td style="text-align: right;">1.170,97</td>
+<td style="text-align: right;">4,80</td>
+<td style="text-align: right;">360.624,5</td>
+<td style="text-align: right;">61.660,33</td>
+<td style="text-align: right;">20,62</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">336.886,4</td>
+<td style="text-align: right;">876,51</td>
+<td style="text-align: right;">3,17</td>
+<td style="text-align: right;">386.662,5</td>
+<td style="text-align: right;">49.776,08</td>
+<td style="text-align: right;">14,78</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">317.140,3</td>
+<td style="text-align: right;">1.139,93</td>
+<td style="text-align: right;">4,40</td>
+<td style="text-align: right;">364.454,6</td>
+<td style="text-align: right;">47.314,32</td>
+<td style="text-align: right;">14,92</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">299.200,7</td>
+<td style="text-align: right;">1.343,56</td>
+<td style="text-align: right;">5,52</td>
+<td style="text-align: right;">358.200,6</td>
+<td style="text-align: right;">58.999,93</td>
+<td style="text-align: right;">19,72</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">319.603,9</td>
+<td style="text-align: right;">1.735,84</td>
+<td style="text-align: right;">6,72</td>
+<td style="text-align: right;">380.667,8</td>
+<td style="text-align: right;">61.063,86</td>
+<td style="text-align: right;">19,11</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">323.517,9</td>
+<td style="text-align: right;">1.284,29</td>
+<td style="text-align: right;">4,87</td>
+<td style="text-align: right;">381.652,4</td>
+<td style="text-align: right;">58.134,56</td>
+<td style="text-align: right;">17,97</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">320.982,2</td>
+<td style="text-align: right;">1.431,65</td>
+<td style="text-align: right;">5,49</td>
+<td style="text-align: right;">383.878,3</td>
+<td style="text-align: right;">62.896,10</td>
+<td style="text-align: right;">19,59</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">307.235,9</td>
+<td style="text-align: right;">1.234,70</td>
+<td style="text-align: right;">4,93</td>
+<td style="text-align: right;">365.336,3</td>
+<td style="text-align: right;">58.100,41</td>
+<td style="text-align: right;">18,91</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">335.583,8</td>
+<td style="text-align: right;">904,56</td>
+<td style="text-align: right;">3,28</td>
+<td style="text-align: right;">387.172,5</td>
+<td style="text-align: right;">51.588,71</td>
+<td style="text-align: right;">15,37</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">318.081,5</td>
+<td style="text-align: right;">1.163,40</td>
+<td style="text-align: right;">4,48</td>
+<td style="text-align: right;">334.155,0</td>
+<td style="text-align: right;">16.073,43</td>
+<td style="text-align: right;">5,05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Este exemplo é ilustrativo de quão enganoso pode ser a aplicação do método da renda: a princípio, unidades que geram alguéis com taxas de rentabilidade próximas à inflação seriam preteridas em relação aos outros investimentos disponíveis no mercado financeiro. No entanto, com a adoção de uma estratégia adequada, o investimento em imóveis mostrou-se capaz de proporcionar rentabilidades elevadas.</p>
+<p>Caso o investidor viesse a procurar um avaliador para saber o valor de mercado dos imóveis antes de sua aquisição, baseado no valor dos aluguéis então vigentes, e o avaliador tivesse utilizado o método da renda, com uma taxa de capitalização de 6% a.a., o investidor provavelmente não teria comprado quaisquer dos imóveis, pois teria chegado à conclusão que todos os imóveis estariam sobrevalorizados, como mostra a tabela abaixo.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Id</th>
+<th style="text-align: right;">Aluguel líq.</th>
+<th style="text-align: right;">Custo Total</th>
+<th style="text-align: right;">Avaliação</th>
+<th style="text-align: right;">Venda</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.418,16</td>
+<td style="text-align: right;">302.227,3</td>
+<td style="text-align: right;">291.350,2</td>
+<td style="text-align: right;">338.173,6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.264,63</td>
+<td style="text-align: right;">314.864,8</td>
+<td style="text-align: right;">259.807,7</td>
+<td style="text-align: right;">327.228,0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1.170,97</td>
+<td style="text-align: right;">298.964,2</td>
+<td style="text-align: right;">240.565,9</td>
+<td style="text-align: right;">360.624,5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">876,51</td>
+<td style="text-align: right;">336.886,4</td>
+<td style="text-align: right;">180.071,5</td>
+<td style="text-align: right;">386.662,5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1.139,93</td>
+<td style="text-align: right;">317.140,3</td>
+<td style="text-align: right;">234.188,9</td>
+<td style="text-align: right;">364.454,6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1.343,56</td>
+<td style="text-align: right;">299.200,7</td>
+<td style="text-align: right;">276.023,0</td>
+<td style="text-align: right;">358.200,6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">1.735,84</td>
+<td style="text-align: right;">319.603,9</td>
+<td style="text-align: right;">356.614,6</td>
+<td style="text-align: right;">380.667,8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1.284,29</td>
+<td style="text-align: right;">323.517,9</td>
+<td style="text-align: right;">263.846,5</td>
+<td style="text-align: right;">381.652,4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1.431,65</td>
+<td style="text-align: right;">320.982,2</td>
+<td style="text-align: right;">294.121,0</td>
+<td style="text-align: right;">383.878,3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1.234,70</td>
+<td style="text-align: right;">307.235,9</td>
+<td style="text-align: right;">253.659,5</td>
+<td style="text-align: right;">365.336,3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">904,56</td>
+<td style="text-align: right;">335.583,8</td>
+<td style="text-align: right;">185.834,8</td>
+<td style="text-align: right;">387.172,5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">1.163,40</td>
+<td style="text-align: right;">318.081,5</td>
+<td style="text-align: right;">239.011,0</td>
+<td style="text-align: right;">334.155,0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>No entanto, caso o avaliador, em comum acordo com o investidor, tivesse estabelecido uma expectativa de valorização a uma taxa de 1,5% a.a., o avaliador teria chegado aos seguintes valores de mercado para os imóveis:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Id</th>
+<th style="text-align: right;">Aluguel líq.</th>
+<th style="text-align: right;">Custo Total</th>
+<th style="text-align: right;">Avaliação</th>
+<th style="text-align: right;">Venda</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.418,16</td>
+<td style="text-align: right;">302.227,3</td>
+<td style="text-align: right;">385.914,3</td>
+<td style="text-align: right;">338.173,6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.264,63</td>
+<td style="text-align: right;">314.864,8</td>
+<td style="text-align: right;">344.134,1</td>
+<td style="text-align: right;">327.228,0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1.170,97</td>
+<td style="text-align: right;">298.964,2</td>
+<td style="text-align: right;">318.647,0</td>
+<td style="text-align: right;">360.624,5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">876,51</td>
+<td style="text-align: right;">336.886,4</td>
+<td style="text-align: right;">238.517,8</td>
+<td style="text-align: right;">386.662,5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1.139,93</td>
+<td style="text-align: right;">317.140,3</td>
+<td style="text-align: right;">310.200,2</td>
+<td style="text-align: right;">364.454,6</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1.343,56</td>
+<td style="text-align: right;">299.200,7</td>
+<td style="text-align: right;">365.612,3</td>
+<td style="text-align: right;">358.200,6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">1.735,84</td>
+<td style="text-align: right;">319.603,9</td>
+<td style="text-align: right;">472.361,8</td>
+<td style="text-align: right;">380.667,8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1.284,29</td>
+<td style="text-align: right;">323.517,9</td>
+<td style="text-align: right;">349.483,8</td>
+<td style="text-align: right;">381.652,4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1.431,65</td>
+<td style="text-align: right;">320.982,2</td>
+<td style="text-align: right;">389.584,6</td>
+<td style="text-align: right;">383.878,3</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1.234,70</td>
+<td style="text-align: right;">307.235,9</td>
+<td style="text-align: right;">335.990,3</td>
+<td style="text-align: right;">365.336,3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">904,56</td>
+<td style="text-align: right;">335.583,8</td>
+<td style="text-align: right;">246.151,6</td>
+<td style="text-align: right;">387.172,5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">1.163,40</td>
+<td style="text-align: right;">318.081,5</td>
+<td style="text-align: right;">316.587,4</td>
+<td style="text-align: right;">334.155,0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Desta forma, baseado nas avaliações fornecidas, o investidor deixaria de comprar apenas as unidades 4, 5, 11 e 12 (talvez ele decidisse comprar a 5 e a 12, por estas terem apresentados valores de mercado apenas um pouco superior ao custo de aquisição).</p>
+<p>Assim, o seu resultado geral seria um rendimento de 5,38% a.a. com os aluguéis, superior ao custo de reposição da inflação e outros custos de carregamento, e teria auferido um lucro total de 409.164,66 com a venda das unidades. Apesar do menor lucro com a venda das unidades, esse lucro se dá sobre um capital investido menor, gerando portanto maior rentabilidade geral, no caso igual a 16,45%.</p>
+</section>
+<section id="conclusão" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="conclusão"><span class="header-section-number">4.3.2</span> Conclusão</h3>
+<p>O método da renda (ou remuneração do capital) é um método muito interessante para ajudar na compreensão de como se formam os valores dos imóveis e dos aluguéis. Se por um lado o valor do imóvel é gerado pela sua capacidade de gerar renda <span class="citation" data-cites="damato">(<a href="references.html#ref-damato" role="doc-biblioref">D’Amato and Alonso 2019, 113</a>)</span>, por outro lado uma parte do total da renda gerada pelo imóvel está implícita (quarta renda), o que dificulta a aplicação do método, seja para formação de valores de venda a partir dos valores dos alugueis ou vice-versa.</p>
+</section>
+</section>
+<section id="método-da-renda-e-método-evolutivo" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="método-da-renda-e-método-evolutivo"><span class="header-section-number">4.4</span> Método da Renda e Método Evolutivo</h2>
+<p>A aplicação do método da renda muitas vezes deve ser feita em conjunto com o método evolutivo. Basicamente, o método evolutivo consiste em formar o valor do imóvel através da soma dos seus componentes (terra e benfeitorias), majorada ou não de um fator de comercialização (ou vantagem da coisa feita), a ser aplicado fins de compensar o proprietário do imóvel pelo fato de ter ali aplicado uma soma de dinheiro que deixou de rentabilizar durante o período de construção do mesmo. Assim, quanto maior for o valor dos investimentos nas benfeitorias, maior tende a ser o fator de comercialização. Como os componentes dos imóveis (terra e benfeitorias), no entanto, possuem comportamento diferente em relação à valorização no tempo (as benfeitorias tendem a se depreciar com o tempo, enquanto a terra urbana, em geral, tende a se tornar mais cara com o crescimento das cidades), é ideal que sejam aplicadas taxas diferentes de rentabilidade a esses dois componentes.</p>
+<p>Além da necessidade de aplicação de taxas separadas aos componentes terra e benfeitorias, outros problemas surgem quando da aplicação do método da renda aos imóveis heterogêneos, como os imóveis comerciais, por exemplo. É sabido que a capacidade de gerar renda das lojas, unidades comerciais em geral situadas no pavimento térreo é maior do que a capacidade de gerar renda dos andares superiores, onde se localizam, em geral, as salas comerciais e/ou andares corporativos. Assim, a composição de terreno e benfeitoria de cada unidade vai ser diferentes, tanto por conta das benfeitorias serem de tamanhos e possivelmente também de padrões e idade aparente diferentes, assim como porque a participação da terra em cada unidade vai ser diferente conforme o tamanho e o valor da benfeitoria. Por exemplo, seja um prédio de três andares (térreo mais dois), em que o térreo é composto por lojas comerciais de frente para uma rua movimentada enquanto os andares superiores são salas comerciais exploradas como locação para proofissionais liberais para instalação de escritórios. Não seria justo dizer que a cada andar da edificação cabe um terço do valor do terreno. Claramente deve-se estabelecer um peso maior para o andar térreo do que para os andares superiores, que tendem a produzir menor renda se comparado às lojas daquele pavimento.</p>
+<p>Em geral, são pré-estabelecidos pesos a cada andar e, a partir desses pesos são calculadas áreas homogeneizadas e assim divididos a cota-parte de cada pavimento.</p>
+<section id="exemplo-1" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="exemplo-1"><span class="header-section-number">4.4.1</span> Exemplo</h3>
+<p>Seja o problema de calcular o valor dos aluguéis de cada pavimento de um edifício novo de 3 andares (térreo + 2), com área construída de 500 <span class="math inline">\(m^2\)</span> cada um, num terreno de 1000 <span class="math inline">\(m^2\)</span> de área.</p>
+<p>Imagine que pesquisa de mercado recém realizada tenha fornecido para os terrenos naquele local o valor de R$1.000,00 por metro quadrado e os custos de construção para reprodução das benfeitorias seja de R$2.000,00 por metro quadrado.</p>
+<p>Imagine ainda que a Taxa de Ocupação dos terrenos no local, estabelecida pela prefeitura seja igual a 0,5 e o Coeficiente de Aproveitamento Básico do terreno seja igual a 1,5, ou seja, que o plano diretor permita que naquele local se construa uma vez e meia a área do terreno, exatamente como as construções existentes se apresentam.</p>
+<p>Aplique taxa de rentabilidade de 8% a.a para o valor do capital terreno e 12% a.a. para o valor das benfeitorias. Considere que no local o peso do térreo em relação aos outros pavimentos seja estimado em 3:1. Considere um fator de comercialização igual a 1,10.</p>
+<p><strong>Solução:</strong></p>
+<p>Como as construções existentes são exatamente as mesmas permitidas pela legislação, não há que se falar em sub ou superaproveitamento do terreno.</p>
+<p>O valor do capital terreno total é de <span class="math inline">\(R\$1.000,00/m^2\times1.000m^2 = R\$ 1.000.000,00\)</span></p>
+<p>Para o cálculo do valor do aluguel do térreo, deve-se considerar 3/5 deste valor (3 vezes o térreo mais 2 superiores), ou seja, o Capital Terreno do térreo é igual a R$ 600.000,00.</p>
+<p>Já o valor do Capital Benfeitoria total do edifício é igual a <span class="math inline">\(R\$2.000,00/m^2\times1.500m^2 = R\$3.000.000,00\)</span>. Assim, o Capital Benfeitoria do térreo e de cada um dos dois pavimentos superiores são idênticos e de valor igual a R$1.000.000,00.</p>
+<p>Dessa forma, para o cálculo do aluguel do térreo tem-se:</p>
+<p><span class="math display">\[Al_{Térreo}=1,10\frac{(600.000,00\times 0,08 + 1.000.000,00 \times 0,12)}{12}= 15.400\]</span></p>
+<p>Ou seja, o valor do aluguel do térreo, baseado nas premissas adotadas, é de R$15.400,00/mês (R$14.685/mês se considerada a capitalização mensal).</p>
+<p>Já para um andar superior, o valor locatício será de:</p>
+<p><span class="math display">\[Al_{Térreo}=1,10\frac{(200.000,00\times 0,08 + 1.000.000,00 \times 0,12)}{12} \approx 12.450\]</span></p>
+<p>Ou seja, o valor do aluguel de um andar superior, baseado nas premissas adotadas, é de R$ 12.450,00/mês (R$11.850/mês se considerada a capitalização mensal).</p>
+</section>
+</section>
+<section id="coeficiente-de-aproveitamento" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="coeficiente-de-aproveitamento"><span class="header-section-number">4.5</span> Coeficiente de Aproveitamento</h2>
+<p>Outro fato importante na avaliação de aluguéis através do método evolutivo está na necessidade da consideração do real aproveitamento do terreno por parte do proprietário. A explicação é que na aplicação do método involutivo é necessário avaliar o terreno para a composição do preço final do imóvel, para enfim aplicar a taxa de rentabilidade. No entanto, pode ser que o edifício construído esteja aproveitando o terreno de maneira superior (superaproveitamento) ou inferior (subaproveitamento) ao potencial do terreno. Assim, para o cálculo do aluguel justo, deve ser primeiramente aplicado um fator ao valor do terreno que leva em consideração este super ou subaproveitamento, calculando assim o capital terreno que está efetivamente disponibilizado ao locatário, em cima do qual deverá incidir a taxa de rendimento.</p>
+<section id="coeficiente-de-aproveitamento-clássico" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="coeficiente-de-aproveitamento-clássico"><span class="header-section-number">4.5.1</span> Coeficiente de aproveitamento clássico</h3>
+<p>Basicamente, o cálculo do coeficiente de aproveitamento do terreno pode ser feito através da simples equação abaixo, que define o Coeficiente de Aproveitamento do terreno como a razão entre a área homogeneizada existente (ou realmente edificada) e a área homogeneizada possível (hipotética, de acordo com os regramentos de uso do solo local):</p>
+<p><span class="math display">\[CA = \frac{A_{hexistente}}{A_{hpossivel}}\]</span></p>
+<section id="exemplo-2" class="level4" data-number="4.5.1.1">
+<h4 data-number="4.5.1.1" class="anchored" data-anchor-id="exemplo-2"><span class="header-section-number">4.5.1.1</span> Exemplo</h4>
+<p>Um terreno com 2.304 <span class="math inline">\(m^2\)</span>, situado numa região com TO = 0,5 e CA = 2, efetivamente ocupado por uma construção térrea com 700 <span class="math inline">\(m^2\)</span> de área construída. Considerando o preço unitário do terreno, avaliado em R$ 887,65/<span class="math inline">\(m^2\)</span>, e o custo de reedição das benfeitorias, estimado em R$ 550.000,00, qual o valor do aluguel do imóvel? Considerar o fator de comercialização igual a 1,10 e as taxas de rentabilidade para o terreno e as benfeitorias de 8% e 12% a.a., respectivamente. Relação de pesos entre térreo, primeiro andar e superiores: 3:2:1.</p>
+<p><strong>Solução:</strong></p>
+<ol type="1">
+<li>Cálculo do valor do terreno</li>
+</ol>
+<p><span class="math inline">\(V_t = 2.304\times 887,65 = 2.045.158,45\)</span></p>
+<ol start="2" type="1">
+<li>Cálculo do Coeficiente de Aproveitamento</li>
+</ol>
+<p><span class="math inline">\(CA = \frac{A_{hexistente}}{A_{hpossivel}}=\frac{3\times 700}{(3 + 2 + 1 + 1) \times 2.304*0,5}=\frac{2.100}{8.064}=0,26\)</span></p>
+<ol start="3" type="1">
+<li>Valor do Capital Terreno disponível ao locatário</li>
+</ol>
+<p><span class="math inline">\(C_t = CA\times V_t = 0,26 \times 2.045.158,45=531.741,20\)</span></p>
+<ol start="4" type="1">
+<li>Valor do Capital Imóvel disponível ao locatário</li>
+</ol>
+<p><span class="math inline">\(C_I = FC\times (C_t + C_b) = 1,10 \times (531.741,20 + 550.000,00) \approx 1.134.915,00\)</span></p>
+<ol start="5" type="1">
+<li>Cálculo da taxa ponderada a ser aplicada ao Capital Imóvel</li>
+</ol>
+<p><span class="math inline">\(i = \frac{i_tV_t + i_bV_b}{V_t + V_b}=\frac{0,0064 \times 531.741,20 + 0,0095 \times 550.000,00}{1.031.741}=0,836\%\)</span></p>
+<ol start="6" type="1">
+<li>Cálculo do valor do aluguel</li>
+</ol>
+<p><span class="math inline">\(Al_I = C_I \times i = 1.134.915,00 \times 0,00836 \approx 9.500 R\$/\text{mês}\)</span></p>
+</section>
+</section>
+<section id="efeitos-da-idade-e-do-padrão-de-construção-existente-sobre-o-aproveitamento-efetivo-do-terreno" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="efeitos-da-idade-e-do-padrão-de-construção-existente-sobre-o-aproveitamento-efetivo-do-terreno"><span class="header-section-number">4.5.2</span> Efeitos da idade e do padrão de construção existente sobre o aproveitamento efetivo do terreno</h3>
+<p>Alguns autores defendem que seja considerado no aproveitamento do terreno não apenas os valores de área construída mas também os aspectos qualitativos desta área construída, tais como padrão de acabamento e depreciação.</p>
+<p>Existem algumas tentativas de se estabelecer uma fórmula para cálculo do coeficiente de aproveitamento (CA) em função dos diversos parâmetros. No entanto, alguns testes realizados pelo autor deste texto parecem mostrar que as fórmulas atualmente em estudo levam a resultados incoerentes. Dessa forma, toma-se a liberdade aqui de propor que as considerações sobre os aspectos qualitativos das benfeitorias sejam feitas já no cálculo das áreas homogeneizadas existentes e possíveis.</p>
+<section id="exemplo-1-1" class="level4" data-number="4.5.2.1">
+<h4 data-number="4.5.2.1" class="anchored" data-anchor-id="exemplo-1-1"><span class="header-section-number">4.5.2.1</span> Exemplo 1</h4>
+<p>Tome-se o mesmo exemplo anterior, porém considerando que as construções existentes tem idade de 22 anos, com 60 anos de vida útil, estando este edifício situado em bairro composto, em sua grande maioria, de edificações novas. Assuma que o padrão da edificação existente em estudo seja coerente com o padrão das outras edificações no entorno.</p>
+<p><strong>Solução</strong></p>
+<ol type="1">
+<li>Cálculo do CA</li>
+</ol>
+<p><span class="math inline">\(A_{hexistente} = 3 \times A_b \times \left ( 0,2 + 0,8\frac{60-22}{60} \right) = 3 \times 700 \times 0,7067 \approx 1.484\)</span></p>
+<p><span class="math inline">\(A_{hpossivel} = (3+2+1+1) \times 0,5\times 2.304 \times \left ( 0,2 + 0,8\frac{60-0}{60} \right) = 8.064\)</span></p>
+<p><span class="math inline">\(CA = \frac{1.484}{8.064}=0,184\)</span></p>
+<ol start="2" type="1">
+<li>Valor do Capital Terreno disponível ao locatário</li>
+</ol>
+<p><span class="math inline">\(C_t = CA\times V_t = 0,184 \times 2.045.158,45=376.383,70\)</span></p>
+<ol start="3" type="1">
+<li>Valor do Capital Imóvel disponível ao locatário</li>
+</ol>
+<p><span class="math inline">\(C_I = FC\times (C_t + C_b) = 1,10 \times (376.383,70 + 550.000,00) \approx 1.019.022,00\)</span></p>
+<ol start="4" type="1">
+<li>Cálculo da taxa ponderada a ser aplicada ao Capital Imóvel</li>
+</ol>
+<p><span class="math inline">\(i = \frac{i_tV_t + i_bV_b}{V_t + V_b}=\frac{0,0064 \times 376.383,70 + 0,0095 \times 550.000,00}{926.383,70}=0,824\%\)</span></p>
+<ol start="5" type="1">
+<li>Cálculo do valor do aluguel</li>
+</ol>
+<p><span class="math inline">\(Al_I = C_I \times i = 1.019.022,00 \times 0,00824\approx 8.400 R\$/\text{mês}\)</span></p>
+</section>
+<section id="exemplo-2-1" class="level4" data-number="4.5.2.2">
+<h4 data-number="4.5.2.2" class="anchored" data-anchor-id="exemplo-2-1"><span class="header-section-number">4.5.2.2</span> Exemplo 2</h4>
+<p>No mesmo exemplo anterior, considere agora que o edifício mais antigo tinha padrão de acabamento inferior ao padrão de acabamento dos imóveis do entorno. Considere os índices de 1,47 e 1,926 para representar os respectivos padrões.</p>
+<ol type="1">
+<li>Cálculo do CA</li>
+</ol>
+<p><span class="math inline">\(A_{hexistente} = 3 \times A_b \times \left ( 0,2 + 0,8\frac{60-22}{60} \right) \times 1,47 = 3 \times 700 \times 0,7067 \times 1,47 \approx 2.181,50\)</span></p>
+<p><span class="math inline">\(A_{hpossivel} = (3+2+1+1) \times 0,5\times 2.304 \times \left ( 0,2 + 0,8\frac{60-0}{60} \right) \times 1,926 = 15.531,26\)</span></p>
+<p><span class="math inline">\(CA = \frac{2.181,50}{15.531,26}=0,14\)</span></p>
+<ol start="2" type="1">
+<li>Valor do Capital Terreno disponível ao locatário</li>
+</ol>
+<p><span class="math inline">\(C_t = CA\times V_t = 0,14 \times 2.045.158,45=287.260,20\)</span></p>
+<ol start="3" type="1">
+<li>Valor do Capital Imóvel disponível ao locatário</li>
+</ol>
+<p><span class="math inline">\(C_I = FC\times (C_t + C_b) = 1,10 \times (287.260,20 + 550.000,00) \approx 920.986,20\)</span></p>
+<ol start="4" type="1">
+<li>Cálculo da taxa ponderada a ser aplicada ao Capital Imóvel</li>
+</ol>
+<p><span class="math inline">\(i = \frac{i_tV_t + i_bV_b}{V_t + V_b}=\frac{0,0064 \times 287.260,20 + 0,0095 \times 550.000,00}{837.260,20}=0,844\%\)</span></p>
+<ol start="5" type="1">
+<li>Cálculo do valor do aluguel</li>
+</ol>
+<p><span class="math inline">\(Al_I = C_I \times i = 920.986,20 \times 0,00844\approx 7.770 R\$/\text{mês}\)</span></p>
+</section>
+</section>
+<section id="cálculo-do-valor-locatício-de-unidades-autônomas" class="level3" data-number="4.5.3">
+<h3 data-number="4.5.3" class="anchored" data-anchor-id="cálculo-do-valor-locatício-de-unidades-autônomas"><span class="header-section-number">4.5.3</span> Cálculo do valor locatício de unidades autônomas</h3>
+<p>Os procedimentos acima apresentados são relevantes para aplicação ao cálculo de aluguéis de prédios completos. Existem situações práticas, no entanto, em que se requer a avaliação de uma unidade autônoma apenas e não se conhecem os dados de áreas do terreno ou área construída das outras unidades.</p>
+<p>Nestes casos, pode-se prosseguir com o cálculo do valor do Capital Terreno da unidade a partir da seguinte expressão:</p>
+<p><span class="math display">\[CT_{un} = q_t \frac{A_{hu}}{TO\times p + (CA_{basico}-TO)*1}\]</span></p>
+<section id="exemplo-3" class="level4" data-number="4.5.3.1">
+<h4 data-number="4.5.3.1" class="anchored" data-anchor-id="exemplo-3"><span class="header-section-number">4.5.3.1</span> Exemplo</h4>
+<p>Calcule o valor locatício de uma unidade de 250 <span class="math inline">\(m^2\)</span> no térreo em um edifício em que não se conhece o valor da área do terreno, tampouco a área construída das outras unidades. Considerar TO = 0,5 e <span class="math inline">\(CA_{basico} = 1,5\)</span>.</p>
+<p>Imagine que pesquisa de mercado recém realizada tenha fornecido para os terrenos naquele local o valor de R$1.000,00 por metro quadrado e os custos de construção para reprodução das benfeitorias seja de R$2.000,00 por metro quadrado.</p>
+<p>Aplique taxa de rentabilidade de 8% a.a para o valor do capital terreno e 12% a.a. para o valor das benfeitorias. Considere que no local o peso do térreo em relação aos outros pavimentos seja estimado em 3:1. Considere um fator de comercialização igual a 1,10.</p>
+<p><strong>Solução</strong></p>
+<ol type="1">
+<li>Cálculo do Capital Terreno da unidade autônoma</li>
+</ol>
+<p><span class="math display">\[CT_{un} = 1.000 \frac{3 \times 250}{0,5\times 3 + (1,5-0,5)*1}=1.000\frac{750}{2,5}=300.000\]</span></p>
+<ol start="2" type="1">
+<li>Cálculo do valor do Capital Benfeitoria</li>
+</ol>
+<p><span class="math inline">\(C_b = 250 \times 2.000 = 500.000,00\)</span></p>
+<ol start="3" type="1">
+<li>Valor do Capital Imóvel disponível ao locatário</li>
+</ol>
+<p><span class="math inline">\(C_I = FC\times (C_t + C_b) = 1,10 \times (300.000,00 + 500.000,00) \approx 880.000,00\)</span></p>
+<ol start="4" type="1">
+<li>Cálculo da taxa ponderada a ser aplicada ao Capital Imóvel</li>
+</ol>
+<p><span class="math inline">\(i = \frac{i_tV_t + i_bV_b}{V_t + V_b}=\frac{0,0064 \times 300.000,00 + 0,0095 \times 500.000,00}{800.000,00}=0,834\%\)</span></p>
+<ol start="5" type="1">
+<li>Cálculo do valor do aluguel</li>
+</ol>
+<p><span class="math inline">\(Al_I = C_I \times i = 880.000,00 \times 0,00834\approx 7.340,00 R\$/\text{mês}\)</span></p>
+</section>
+</section>
+</section>
+<section id="mcddm" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="mcddm"><span class="header-section-number">4.6</span> O Método Comparativo</h2>
+<p>O Método Comparativo Direto de Dados de Mercado (MCDDM) é um método de aplicação recomendável para avaliação tanto de aluguéis como de valores de venda, quando a tipologia e o mercado a que o imóvel pertence possibilitar a aplicação do método.</p>
+<p>Como os imóveis são bens heterogêneos, em geral, sua comparação é injusta. No entanto, algumas tipologias, como apartamentos, quando localizados em grandes centros urbanos, onde estes são fabricados praticamente em série, possibilitam a aplicação do método, desde que os seus valores possam ser ajustados de maneira a possibilitar essa comparação, como no caso da aplicação do tratamento por fatores, onde fatores de <em>homogeneização</em> são aplicados a esses bens heterogêneos com fins de permitir a comparação de seus valores. Outro tratamento ainda mais interessante é o chamado tratamento científico, ou seja, o tratamento das características dos imóveis por métodos estatísticos que permitam explicar como se dá no mercado a formação dos preços dos aluguéis ou valores de venda.</p>
+<p>Como este método prescinde da definição prévia de taxas de rentabilidade ou expectativa de valorização, ele deve ser preferido sempre que aplicação seja possibilitada pela existência de um número razoável de dados de mercado.</p>
+</section>
+<section id="método-da-renda-vs.-método-comparativo" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="método-da-renda-vs.-método-comparativo"><span class="header-section-number">4.7</span> Método da Renda vs.&nbsp;Método Comparativo</h2>
+<p>O exemplo abaixo, extraído de <span class="citation" data-cites="damato">D’Amato and Alonso (<a href="references.html#ref-damato" role="doc-biblioref">2019, 94</a>)</span>, ilustra como pode ser problemática a aplicação do método da renda ou remuneração do capital.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p>Table: Exemplo 1: Método da Renda vs.&nbsp;Método Comparativo.</p>
+<div class="line-block">Id| Venda (R$)| Aluguel</div>
+<p>(R$/mês)| Taxa (% a.m.)| Taxa (% a.a.)| |–:|———–:|—————-:|————-:|————-:| | 1| 420.000| 2.000| 0,48| 5,87| | 2| 450.000| 2.800| 0,62| 7,73| | 3| 320.000| 1.400| 0,44| 5,38| | 4| 260.000| 1.250| 0,48| 5,92| | 5| 460.000| 2.700| 0,59| 7,28| | 6| 690.000| 4.000| 0,58| 7,18| | 7| 650.000| 3.800| 0,58| 7,25| | 8| 380.000| 1.240| 0,33| 3,99| | 9| 550.000| 3.300| 0,60| 7,44| | 10| 560.000| 3.500| 0,62| 7,76| | 11| 420.000| 2.500| 0,60| 7,38| | 12| 320.000| 1.800| 0,56| 6,96| | 13| 430.000| 2.500| 0,58| 7,20| | 14| 290.000| 1.300| 0,45| 5,51|</p>
+</div>
+</div>
+<p>A pesquisa de mercado foi realizada com intuito de fundamentar a taxa de rendimento a ser aplicada no método da renda.</p>
+<p>Neste exemplo <span class="citation" data-cites="damato">D’Amato and Alonso (<a href="references.html#ref-damato" role="doc-biblioref">2019</a>)</span> apenas ilustravam como seria a pesquisa e o cálculo da taxa de rentabilidade e não chegaram a demonstrar a aplicação do método para a avaliação de qualquer unidade. É simples fazê-lo, contudo. Imagine-se que a unidade em análise seja uma unidade com valor de venda igual a R$ 425.000,00.</p>
+<p>A taxa de rentabilidade média anual calculada pela amostra é de 6,63 % a.a., com desvio-padrão de 1,11. Pode-se construir um intervalo de confiança para a média com confiança de 80% utilizando-se, simplificadamente, a distribuição normal <span class="citation" data-cites="matloff2017 matloff2009">(ver <a href="references.html#ref-matloff2017" role="doc-biblioref"><strong>matloff2017?</strong></a>; <a href="references.html#ref-matloff2009" role="doc-biblioref"><strong>matloff2009?</strong></a>)</span>, através da equação:</p>
+<p><span class="math display">\[IC = 6,63 \pm \frac{\mathcal{N}_{90} \times \hat \sigma}{\sqrt{n}} = 6,63 \pm \frac{1,28 \times 1,11}{\sqrt{14}} = 6,63 \pm 0,38\]</span></p>
+<p>O valor do aluguel para o apartamento com valor de venda igual a R$425.000,00 é, aproximadamente, R$ 2.350,00 [2.215,00; 2.480,00].</p>
+<p>Acredita-se que esta seja uma aplicação válida do método da renda, pois o valor de venda da unidade em pauta tem valor próximo ao valor da média amostral, de R$ 442.857,14. No entanto, se o propósito fosse o de avaliar outros imóveis, com diferentes preços de venda, a partir dessa mesma taxa, o resultado final não seria adequado, como será visto.</p>
+<p>Pois com o método da renda o valor estimado para o aluguel para um imóvel com valor de venda de R$ 275.000,00 seria de, aproximadamente, R$ 1.520,00 [1.430; 1600,00]. Já o valor do aluguel estimado com o método da renda para um imóvel com valor de venda igual a R$ 575.000,00 seria de R$ 3.175 [3.000,00; 3.350,00]. Em suma, o método da renda implica que imóveis com os mais diversos valores de venda apresentarão a mesma rentabilidade.</p>
+<p>No entanto, esta hipótese (de que a rentabilidade é constante para quaisquer valores de venda) deveria ser testada. Em termos estritamente formais, deveria ser testada a hipótese de que não há regressão entre a taxa de rentabilidade e os valores de venda.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="alugueis_files/figure-html/RegressaoRenda-1.png" class="img-fluid figure-img" width="576"></p>
+<figcaption>Regressão entre os valores de Aluguéis e de Venda.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>A Figura @ref(fig:RegressaoRenda) mostra que esta não é uma hipótese válida para este caso: claramente existe uma regressão entre os valores de aluguel e os valores de venda, <em>i.e.</em> a taxa de rentabilidade varia em função do preço de venda dos imóveis<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>.</p>
+<p>Outra maneira mais simples de tratar os dados via método comparativo seria através da modelagem direta dos preços dos aluguéis em função dos preços de venda, como ilustrado na Figura @ref(fig:Comparativo).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="alugueis_files/figure-html/Comparativo-1.png" class="img-fluid figure-img" width="576"></p>
+<figcaption>Regressão entre os valores de Aluguéis e de Venda.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>O valor do aluguel calculado com este último modelo para os imóveis com valores de venda iguais a R$ 275.000,00; R$ 425.000,00 e R$ 575.000,00; assim como os valores previamente ajustados para estes mesmos imóveis com o método da renda podem ser vistos na Tabela @ref(tab:comparacao).</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Comparação de avaliações: Método da Renda vs. Método Comparativo.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">Preço de Venda (R$)</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Aluguel (R$)</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Taxa (% a.a.)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd" data-grouplength="3">
+<td colspan="3" style="border-bottom: 1px solid"><strong>Método da Renda</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: right; padding-left: 2em;" data-indentlevel="1">275.000</td>
+<td style="text-align: right;">1.520</td>
+<td style="text-align: right;">6,63</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right; padding-left: 2em;" data-indentlevel="1">425.000</td>
+<td style="text-align: right;">2.350</td>
+<td style="text-align: right;">6,63</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; padding-left: 2em;" data-indentlevel="1">575.000</td>
+<td style="text-align: right;">3.175</td>
+<td style="text-align: right;">6,63</td>
+</tr>
+<tr class="odd" data-grouplength="3">
+<td colspan="3" style="border-bottom: 1px solid"><strong>Método Comparativo</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: right; padding-left: 2em;" data-indentlevel="1">275.000</td>
+<td style="text-align: right;">1.340</td>
+<td style="text-align: right;">5,85</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right; padding-left: 2em;" data-indentlevel="1">425.000</td>
+<td style="text-align: right;">2.370</td>
+<td style="text-align: right;">6,70</td>
+</tr>
+<tr class="even">
+<td style="text-align: right; padding-left: 2em;" data-indentlevel="1">575.000</td>
+<td style="text-align: right;">3.400</td>
+<td style="text-align: right;">7,10</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>O que se percebe claramente pela análise da tabela acima é que o Método da Renda claramente seria adequado para calcular o aluguel estimado apenas para o imóvel com valor de venda igual a R$ 425.000,00, enquanto majora injustamente o valor do aluguel do imóvel com valor de venda abaixo da média amostral (R$ 275.000,00) e minora também injustamente o valor do aluguel do imóvel com valor de venda cima da média amostra (R$ 575.000,00).</p>
+</section>
+<section id="exemplo-4" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="exemplo-4"><span class="header-section-number">4.8</span> Exemplo</h2>
+<p>A melhor alternativa, então, ao método da renda ou remuneração do capital, é o Método Comparativo Direto de Dados de Mercado (MCDDM). Para aplicação deste método, contudo, não é necessário conhecer os valores de venda das unidades, como no exemplo anterior. Uma pesquisa de mercado deve ser feita na busca de encontrar as variáveis relevantes para explicar a formação de preço dos aluguéis apenas. A abundância de dados de anúncios de imóveis para alugar, em alguns mercados, facilita bastante a vida do avaliador. É o caso dos apartamentos em grandes centros urbanos. A tabela abaixo mostra os dados coletados pelo autor visando efetuar avaliação do valor do aluguel de apartamentos de um quarto (tipo Studio) e dois quartos na região da Agronômica. Deve-se notar que, no caso dos apartamentos, usualmente é relevante aos locatários o conhecimento prévio dos outros custos que terão decorrentes da locação do imóvel, tais como IPTU e condomínio. Neste caso, portanto, a variável dependente não será o valor do aluguel a ser cobrado pelo proprietário, mas o valor total das despesas do locatário. Assim, após o ajuste do modelo, para obtenção do valor do aluguel a constar do contrato, deverá ser retirado dos valores ajustados o valor das taxas condominiais e do IPTU.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Exemplo 2: Dados para aplicação do Método Comparativo.</caption>
+<colgroup>
+<col style="width: 3%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 10%">
+<col style="width: 7%">
+<col style="width: 10%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Id</th>
+<th style="text-align: left;">Padrao</th>
+<th style="text-align: right;">Area</th>
+<th style="text-align: right;">Quartos</th>
+<th style="text-align: right;">Vagas</th>
+<th style="text-align: right;">Aluguel</th>
+<th style="text-align: right;">Condo</th>
+<th style="text-align: right;">IPTU</th>
+<th style="text-align: right;">Total</th>
+<th style="text-align: left;">Bairro</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Baixo</td>
+<td style="text-align: right;">50,08</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">950</td>
+<td style="text-align: right;">700,00</td>
+<td style="text-align: right;">78,00</td>
+<td style="text-align: right;">1.728,00</td>
+<td style="text-align: left;">Centro</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: right;">105,00</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5.500</td>
+<td style="text-align: right;">600,00</td>
+<td style="text-align: right;">172,00</td>
+<td style="text-align: right;">6.272,00</td>
+<td style="text-align: left;">Centro</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Medio</td>
+<td style="text-align: right;">105,00</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2.500</td>
+<td style="text-align: right;">900,00</td>
+<td style="text-align: right;">117,00</td>
+<td style="text-align: right;">3.517,00</td>
+<td style="text-align: left;">Centro</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: right;">75,21</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3.950</td>
+<td style="text-align: right;">676,00</td>
+<td style="text-align: right;">158,00</td>
+<td style="text-align: right;">4.784,00</td>
+<td style="text-align: left;">Centro</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">Medio</td>
+<td style="text-align: right;">256,64</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3.200</td>
+<td style="text-align: right;">1.200,00</td>
+<td style="text-align: right;">574,00</td>
+<td style="text-align: right;">4.974,00</td>
+<td style="text-align: left;">Centro</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: right;">140,00</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">2.320,00</td>
+<td style="text-align: right;">504,00</td>
+<td style="text-align: right;">3.124,00</td>
+<td style="text-align: left;">Centro</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">Medio</td>
+<td style="text-align: right;">60,00</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2.850</td>
+<td style="text-align: right;">508,00</td>
+<td style="text-align: right;">66,00</td>
+<td style="text-align: right;">3.424,00</td>
+<td style="text-align: left;">Centro</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">Medio</td>
+<td style="text-align: right;">50,08</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.600</td>
+<td style="text-align: right;">677,00</td>
+<td style="text-align: right;">78,00</td>
+<td style="text-align: right;">2.355,00</td>
+<td style="text-align: left;">Centro</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">Baixo</td>
+<td style="text-align: right;">105,42</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2.900</td>
+<td style="text-align: right;">885,00</td>
+<td style="text-align: right;">223,55</td>
+<td style="text-align: right;">4.008,55</td>
+<td style="text-align: left;">Centro</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10</td>
+<td style="text-align: left;">Baixo</td>
+<td style="text-align: right;">49,74</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.300</td>
+<td style="text-align: right;">550,00</td>
+<td style="text-align: right;">195,00</td>
+<td style="text-align: right;">2.045,00</td>
+<td style="text-align: left;">Centro</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">Baixo</td>
+<td style="text-align: right;">31,91</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.800</td>
+<td style="text-align: right;">450,90</td>
+<td style="text-align: right;">160,00</td>
+<td style="text-align: right;">2.410,90</td>
+<td style="text-align: left;">Centro</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: right;">213,00</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3.200</td>
+<td style="text-align: right;">1.568,34</td>
+<td style="text-align: right;">539,60</td>
+<td style="text-align: right;">5.307,94</td>
+<td style="text-align: left;">Centro</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">13</td>
+<td style="text-align: left;">Baixo</td>
+<td style="text-align: right;">42,00</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.550</td>
+<td style="text-align: right;">461,00</td>
+<td style="text-align: right;">45,21</td>
+<td style="text-align: right;">2.056,21</td>
+<td style="text-align: left;">Centro</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">14</td>
+<td style="text-align: left;">Baixo</td>
+<td style="text-align: right;">75,30</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2.100</td>
+<td style="text-align: right;">510,00</td>
+<td style="text-align: right;">56,18</td>
+<td style="text-align: right;">2.666,18</td>
+<td style="text-align: left;">Centro</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">15</td>
+<td style="text-align: left;">Baixo</td>
+<td style="text-align: right;">24,61</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.600</td>
+<td style="text-align: right;">102,98</td>
+<td style="text-align: right;">108,08</td>
+<td style="text-align: right;">1.811,06</td>
+<td style="text-align: left;">Centro</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">16</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: right;">28,93</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2.500</td>
+<td style="text-align: right;">281,22</td>
+<td style="text-align: right;">115,75</td>
+<td style="text-align: right;">2.896,97</td>
+<td style="text-align: left;">Centro</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">17</td>
+<td style="text-align: left;">Medio</td>
+<td style="text-align: right;">43,49</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.550</td>
+<td style="text-align: right;">359,75</td>
+<td style="text-align: right;">99,57</td>
+<td style="text-align: right;">2.009,32</td>
+<td style="text-align: left;">Centro</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">18</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: right;">34,96</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3.600</td>
+<td style="text-align: right;">497,11</td>
+<td style="text-align: right;">96,59</td>
+<td style="text-align: right;">4.193,70</td>
+<td style="text-align: left;">Agronômica</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">19</td>
+<td style="text-align: left;">Medio</td>
+<td style="text-align: right;">60,38</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2.400</td>
+<td style="text-align: right;">708,16</td>
+<td style="text-align: right;">131,85</td>
+<td style="text-align: right;">3.240,01</td>
+<td style="text-align: left;">Agronômica</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">20</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: right;">157,00</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5.500</td>
+<td style="text-align: right;">1.440,86</td>
+<td style="text-align: right;">538,15</td>
+<td style="text-align: right;">7.479,01</td>
+<td style="text-align: left;">Agronômica</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">21</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: right;">151,00</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6.000</td>
+<td style="text-align: right;">1.420,00</td>
+<td style="text-align: right;">60,00</td>
+<td style="text-align: right;">7.480,00</td>
+<td style="text-align: left;">Agronômica</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">22</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: right;">139,00</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8.000</td>
+<td style="text-align: right;">1.050,00</td>
+<td style="text-align: right;">465,00</td>
+<td style="text-align: right;">9.515,00</td>
+<td style="text-align: left;">Agronômica</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">23</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: right;">93,00</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4.900</td>
+<td style="text-align: right;">743,00</td>
+<td style="text-align: right;">1.232,00</td>
+<td style="text-align: right;">6.875,00</td>
+<td style="text-align: left;">Agronômica</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">24</td>
+<td style="text-align: left;">Baixo</td>
+<td style="text-align: right;">42,00</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.500</td>
+<td style="text-align: right;">309,00</td>
+<td style="text-align: right;">60,00</td>
+<td style="text-align: right;">1.869,00</td>
+<td style="text-align: left;">Agronômica</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">25</td>
+<td style="text-align: left;">Medio</td>
+<td style="text-align: right;">65,00</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2.500</td>
+<td style="text-align: right;">600,00</td>
+<td style="text-align: right;">117,00</td>
+<td style="text-align: right;">3.217,00</td>
+<td style="text-align: left;">Agronômica</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">26</td>
+<td style="text-align: left;">Medio</td>
+<td style="text-align: right;">64,00</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2.000</td>
+<td style="text-align: right;">766,00</td>
+<td style="text-align: right;">136,00</td>
+<td style="text-align: right;">2.902,00</td>
+<td style="text-align: left;">Agronômica</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>O modelo que melhor se ajustou aos dados pode ser visto na Figura @ref(fig:ExComparativo). Deve-se notar que o modelo ajustou-se bem a estes dados. Algumas variáveis que se pensava relevantes mostraram apresentar pouca significância estatística, como a variável Dormitórios.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="alugueis_files/figure-html/ExComparativo-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Modelo ajustado para o valor total a ser despendido pelo locatário.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>De posse do modelo assim ajustado, procedeu-se a avaliação de três unidades:</p>
+<ol type="1">
+<li>Um Studio com 35,4 <span class="math inline">\(m^2\)</span>, 1 vaga de garagem e padrão alto no bairro Agronômica.</li>
+<li>Um apartamento de 2 quartos, com 65,66 <span class="math inline">\(m^2\)</span> de área, com 1 vaga de garagem e padrão alto no bairro da Agronômica</li>
+<li>Um apartamento de 2 quartos, com 71,64 <span class="math inline">\(m^2\)</span> de área, com 1 vaga de garagem e padrão alto no bairro da Agronômica</li>
+</ol>
+<p>O valor ajustado pelo modelo, o valor das taxas condominiais e IPTU previstos, assim como o valor do aluguel a constar em contrato podem ser vistos na Tabela abaixo:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Exemplo 2: Aluguéis calculados pelo modelo.</caption>
+<colgroup>
+<col style="width: 4%">
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 10%">
+<col style="width: 15%">
+<col style="width: 16%">
+<col style="width: 7%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Id</th>
+<th style="text-align: right;">Area</th>
+<th style="text-align: right;">Quartos</th>
+<th style="text-align: right;">Vagas</th>
+<th style="text-align: left;">Padrao</th>
+<th style="text-align: right;">VAjustado</th>
+<th style="text-align: right;">Condominio</th>
+<th style="text-align: right;">IPTU</th>
+<th style="text-align: right;">Aluguel</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">35,40</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: right;">3.650,38</td>
+<td style="text-align: right;">150</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">3.430,38</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">65,66</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: right;">5.125,77</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">4.825,77</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">71,64</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Alto</td>
+<td style="text-align: right;">5.339,37</td>
+<td style="text-align: right;">215</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">5.014,37</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-BLANCHARD1979" class="csl-entry" role="listitem">
+Blanchard, Olivier Jean. 1979. <span>“Speculative Bubbles, Crashes and Rational Expectations.”</span> <em>Economics Letters</em> 3 (4): 387–89. https://doi.org/<a href="https://doi.org/10.1016/0165-1765(79)90017-X">https://doi.org/10.1016/0165-1765(79)90017-X</a>.
+</div>
+<div id="ref-damato" class="csl-entry" role="listitem">
+D’Amato, Mônica, and Nelson Roberto Pereira Alonso. 2019. <em>Avaliação de Aluguéis</em>. Edited by Leud. 4th ed. São Paulo.
+</div>
+<div id="ref-lacerda2020" class="csl-entry" role="listitem">
+Lacerda, Norma, and Pedro Abramo. 2020. <span>“O Mercado de Aluguel de Imóveis Comerciais e de Serviços Em Centros Históricos Brasileiros: Implicações Da Conservação Inovadora e Da Destruição Aniquiladora Nos Preços Dos Bens Patrimoniais.”</span> <em>Revista Brasileira de Estudos Urbanos e Regionais</em> 22 (E202027pt): 1–27. https://doi.org/<a href="https://doi.org/10.22296/2317-1529.rbeur.202027pt">https://doi.org/10.22296/2317-1529.rbeur.202027pt</a>.
+</div>
+<div id="ref-Malpezzi2002TheRO" class="csl-entry" role="listitem">
+Malpezzi, Stephen, and Susan M. Wachter. 2002. <span>“The Role of Speculation in Real Estate Cycles.”</span> https://doi.org/<a href="https://dx.doi.org/10.2139/ssrn.2585241">https://dx.doi.org/10.2139/ssrn.2585241</a>.
+</div>
+</div>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Essa é uma das primeiras dificuldades relacionadas ao método da remuneração do capital: é necessário, primeiramente, conhecer o valor de mercado de venda do imóvel, para só então ser possível calcular o valor de seu aluguel.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Por exemplo, o proprietário de um apartamento pode locar o seu apartamento por um valor muito baixo, em troca do locatário se responsabilizar pelo pagamento das taxas do imóvel (condomínio, IPTU, e outras), enquanto aguarda o momento certo para sua alienação.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Também há cobrança de IR sobre os aluguéis recebidos. Assim, para que a estratégia funcione, o investidor deverá exigir um aluguel que cubra os custos e a atualização monetária já líquido de impostos.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>É fácil perceber que enquanto algumas unidades tiveram rentabilidade bem acima do esperado, como as unidade 1 e 7, outras unidades tiveram rentabilidade bem abaixo do esperado, como as unidades 4 e 11. Assim, para o cálculo do lucro real exato de cada unidade em separado, dever-se-ia levar em conta o lucro/prejuízo operacional que o carregamento destas unidades no tempo causou.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Formalmente, dever-se-ia demonstrar que o teste F rejeitou a hipótese nula de que não há regressão entre a taxa de rendimento e os valores de venda. Este teste foi realizado pelo autor, porém não foi incluído no texto.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./economica.html" class="pagination-link" aria-label="Engenharia Econômica">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Engenharia Econômica</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./notas.html" class="pagination-link" aria-label="Considerações Finais">
+        <span class="nav-page-text">Considerações Finais</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

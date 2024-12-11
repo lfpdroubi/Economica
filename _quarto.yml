@@ -1,0 +1,39 @@
+project:
+  type: book
+
+book:
+  title: "Engenharia Econômica e Avaliação de Aluguéis"
+  author: "Luiz Droubi"
+  date: "05/12/2024"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - financeira.qmd
+    - economica.qmd
+    - alugueis.qmd
+    - notas.qmd
+    - references.qmd
+    - anexo_I.qmd
+    - anexo_II.qmd
+bibliography: references.bib
+crossref:
+  fig-prefix: Figura
+  tbl-prefix: Tabela
+  eq-prefix: Equação
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+    link-citations: true
+    include-in-header:
+      text: |
+        \usepackage[brazil]{babel}
+        \usepackage{dcolumn}
+        \usepackage{makeidx}
+        \makeindex
+    include-after-body:
+      text: |
+        \printindex
+editor: visual
+
