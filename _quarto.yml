@@ -19,6 +19,7 @@ book:
     - anexo_IV.qmd
     - anexo_V.qmd
 bibliography: references.bib
+lang: pt
 crossref:
   fig-prefix: Figura
   tbl-prefix: Tabela
@@ -32,7 +33,6 @@ format:
     link-citations: true
     include-in-header:
       text: |
-        \usepackage[brazil]{babel}
         \usepackage{dcolumn}
         \usepackage{makeidx}
         \makeindex

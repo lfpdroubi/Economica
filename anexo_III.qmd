@@ -1,5 +1,7 @@
 # Anexo III {.unnumbered}
 
+$$C = \text{PMT}\cdot \text{FVP}(i,T)$$ {#eq-FVP}
+
 ```{r, include=FALSE}
 knitr::opts_chunk$set(cache=TRUE, echo=FALSE, fig.pos="H", 
                       fig.path="./img-modelagem/",
@@ -29,12 +31,14 @@ for (t in 1:69) {
   }
 }
 fvp <- as.data.frame(M)
-colnames(fvp) <- c(".165%", ".247%", ".327%", ".407%", ".50%", ".64%", ".72%", 
+fvp <- cbind(periods, fvp)
+colnames(fvp) <- c("T/i(%)", ".165%", ".247%", ".327%", ".407%", ".50%", ".64%", ".72%", 
                    ".80%", ".87%", ".95%")
-rownames(fvp) <- periods
+# rownames(fvp) <- periods
 fvp |>
-  kable(digits = 3, row.names = T,
-        caption = "Fator de Valor Presente (FVP)")
+  kable(digits = 3, row.names = F,
+        caption = "Fator de Valor Presente (FVP)",
+        format.args = list(decimal.mark = ",", big.mark = "."))
 ```
 
 ```{r}
@@ -46,9 +50,11 @@ for (t in 1:69) {
   }
 }
 fvp <- as.data.frame(M)
-colnames(fvp) <- c("1%", "2%", "3%", "4%", "5%", "6%", "7%", "8%", "9%", "10%")
-rownames(fvp) <- periods
+fvp <- cbind(periods, fvp)
+colnames(fvp) <- c("T/i(%)", "1%", "2%", "3%", "4%", "5%", "6%", "7%", "8%", "9%", "10%")
+# rownames(fvp) <- periods
 fvp |>
-  kable(digits = 3, row.names = T,
-        caption = "Fator de Valor Presente (FVP)")
+  kable(digits = 3, row.names = F,
+        caption = "Fator de Valor Presente (FVP)",
+        format.args = list(decimal.mark = ",", big.mark = "."))
 ```
