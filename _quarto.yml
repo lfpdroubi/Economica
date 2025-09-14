@@ -39,5 +39,5 @@ format:
     include-after-body:
       text: |
         \printindex
-editor: visual
+editor: source
 

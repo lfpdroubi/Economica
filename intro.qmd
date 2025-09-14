@@ -4,24 +4,41 @@ Este livro...
 
 ## Imóveis e Mercado Imobiliário
 
-Segundo [@granelle; apud @lacerda2020], os imóveis são bens heterogêneos, *i.e.* ao mesmo tempo em que os imóveis se caracterizam por serem bens de consumo (bens de consumo durável, ou seja, bens que são consumidos ao longo de um período longo de tempo, como os automóveis), eles também podem ser vistos como bens de investimento, pois possuem a capacidade de produzir renda.
+Segundo [@granelle; apud @lacerda2020], os imóveis são bens heterogêneos, *i.e.*
+ao mesmo tempo em que os imóveis se caracterizam por serem bens de consumo 
+(bens de consumo durável, ou seja, bens que são consumidos ao longo de um 
+período longo de tempo, como os automóveis), eles também podem ser vistos como 
+bens de investimento, pois possuem a capacidade de produzir renda.
 
-Como bem de investimento, os imóveis devem ser analisados à luz do mercado de bens, onde são comparados à outros tipos de bens e investimentos disponíveis na economia.
+Como bem de investimento, os imóveis devem ser analisados à luz do mercado de 
+bens, onde são comparados à outros tipos de bens e investimentos disponíveis na
+economia.
 
-Como um bem de consumo, os imóveis devem ser vistos como um bem que tem uma série de características demandadas pelos consumidores, se desgasta, perde valor (deprecia), e tem uma vida útil limitada.
+Como um bem de consumo, os imóveis devem ser vistos como um bem que tem uma 
+série de características demandadas pelos consumidores, se desgasta, perde valor
+(deprecia), e tem uma vida útil limitada.
 
-O mercado imobiliário é segmentado. Segundo @wheaton1999, o MI urbano pode ser dividido, basicamente, em:
+O mercado imobiliário é segmentado. Segundo @wheaton1999, o MI urbano pode ser 
+dividido, basicamente, em:
 
 1.  Mercado de imóveis residenciais;
 2.  Mercado de imóveis comerciais para escritórios;
 3.  Mercado de imóveis comerciais para o varejo (incluso shopping centers) e;
 4.  Mercado de imóveis industriais
 
-Os imóveis residenciais, por exemplo, não pode ser analisado em conjunto com o mercado de imóveis comerciais. Os mercados residencial, comercial, industrial, etc. possuem diferentes ciclos. Segundo @wheaton1999 [p. 209-210], diferentes tipos de imóveis apresentam diferentes tipos de comportamento cíclico. Alguns tipos de imóveis apresentam movimentos de preços mais ligados à economia enquanto outros apresentam períodos de oscilação muito mais longos e apresentam quase nenhuma relação com oscilação da economia [@wheaton1999, p. 209-210].
+Os imóveis residenciais, por exemplo, não pode ser analisado em conjunto com o 
+mercado de imóveis comerciais. Os mercados residencial, comercial, industrial, 
+etc. possuem diferentes ciclos. Segundo @wheaton1999 [p. 209-210], diferentes 
+tipos de imóveis apresentam diferentes tipos de comportamento cíclico. Alguns 
+tipos de imóveis apresentam movimentos de preços mais ligados à economia 
+enquanto outros apresentam períodos de oscilação muito mais longos e apresentam 
+quase nenhuma relação com oscilação da economia [@wheaton1999, p. 209-210].
 
 ### O imóvel visto como um investimento
 
-Segundo @Malpezzi2002TheRO, um imóvel é um ativo que rende um fluxo de serviços ao longo do tempo. O Quadro \@ref(qua:Quadro-1) mostra a diferenciação entre os conceitos de Estoque e Fluxo, muito utilizados na Economia.
+Segundo @Malpezzi2002TheRO, um imóvel é um ativo que rende um fluxo de serviços
+ao longo do tempo. O Quadro \@ref(qua:Quadro-1) mostra a diferenciação entre os 
+conceitos de Estoque e Fluxo, muito utilizados na Economia.
 
 ::: {#tbl-StockvsFlow}
 | Estoque          | Fluxo               |
@@ -35,20 +52,40 @@ Distinção entre Estoque e Fluxo. Fonte: Adaptada de @Malpezzi2002TheRO.
 
 :::
 
-O quadro acima poderia ser facilmente expandido para incorporar outras formas de investimentos, como debêntures (que rendem coupons), ações (que rendem dividendos) e outros.
+O quadro acima poderia ser facilmente expandido para incorporar outras formas de
+investimentos, como debêntures (que rendem coupons), ações (que rendem 
+dividendos) e outros.
 
-Na ótica do investidor, o imóvel é como um título de longo prazo. Racionalmente ou não, o comprador de um imóvel com fins de investimento espera que o imóvel comprado vá gerar um fluxo de aluguéis (constantes ou não) ao longo do tempo, de maneira que este fluxo de aluguéis compense o investimento inicial na compra do imóvel.
+Na ótica do investidor, o imóvel é como um título de longo prazo. Racionalmente
+ou não, o comprador de um imóvel com fins de investimento espera que o imóvel 
+comprado vá gerar um fluxo de aluguéis (constantes ou não) ao longo do tempo, de
+maneira que este fluxo de aluguéis compense o investimento inicial na compra do 
+imóvel.
 
-Segundo @Malpezzi2002TheRO [p. 4], o valor presente $V$ de um imóvel pode ser calculado conforme a equação \@ref(eq:VPImovel), onde ${R_B}_t$ é a renda bruta dos aluguéis, $C_t$ é o custo recorrente com a manutenção do imóvel e $i$ é a taxa de desconto.
+Segundo @Malpezzi2002TheRO [p. 4], o valor presente $V$ de um imóvel pode ser 
+calculado conforme a equação \@ref(eq:VPImovel), onde ${R_B}_t$ é a renda bruta
+dos aluguéis, $C_t$ é o custo recorrente com a manutenção do imóvel e $i$ é a 
+taxa de desconto.
 
 $$
 V = \sum_{t=0}^T \frac{\mathbb{E}[{R_B}_t-C_t]}{(1+i)^t}
 $$ {#eq:VPImovel}
 
-Diferentemente do que hoje ocorre com a maior parte dos investimentos capitalistas, em que o *payback* esperado gira em torno de 5 a 10 anos, o comprador de um imóvel espera que este gere um fluxo de renda ao longo de décadas.
+Diferentemente do que hoje ocorre com a maior parte dos investimentos 
+capitalistas, em que o *payback* esperado gira em torno de 5 a 10 anos, o 
+comprador de um imóvel espera que este gere um fluxo de renda ao longo de décadas.
 
-Assim, a compra de um imóvel assemelha-se à compra dos títulos de renda fixa de maior *duration* disponíveis no mercado.
+Assim, a compra de um imóvel assemelha-se à compra dos títulos de renda fixa de
+maior *duration* disponíveis no mercado.
 
-Ora, como se sabe, o valor de face destes títulos, ou seja, o valor do resgate destes títulos no vencimento, é dado. Porém, os títulos são negociados no mercado secundário a valor de mercado, sendo que os títulos de longo prazo são os mais sensíveis a variações nas taxas de juros. A saber, o preço destes títulos é inversamente proporcional às taxas de juros, ou seja, quanto menor as taxas, maior o valor presente descontado dos títulos, ou valor de mercado, e vice-versa [@resende, 79]. O mesmo acontece com os imóveis: quanto menor a taxa de juros utilizadas para descontar o fluxo de aluguéis líquidos futuros, maior será o valor de mercado do imóvel no momento da análise.
+Ora, como se sabe, o valor de face destes títulos, ou seja, o valor do resgate 
+destes títulos no vencimento, é dado. Porém, os títulos são negociados no 
+mercado secundário a valor de mercado, sendo que os títulos de longo prazo são 
+os mais sensíveis a variações nas taxas de juros. A saber, o preço destes 
+títulos é inversamente proporcional às taxas de juros, ou seja, quanto menor as 
+taxas, maior o valor presente descontado dos títulos, ou valor de mercado, e 
+vice-versa [@resende, 79]. O mesmo acontece com os imóveis: quanto menor a taxa 
+de juros utilizadas para descontar o fluxo de aluguéis líquidos futuros, maior 
+será o valor de mercado do imóvel no momento da análise.
 
 ### O imóvel visto como um bem de consumo
