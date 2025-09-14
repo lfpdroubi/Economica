@@ -15,11 +15,15 @@ book:
     - references.qmd
     - anexo_I.qmd
     - anexo_II.qmd
+    - anexo_III.qmd
+    - anexo_IV.qmd
+    - anexo_V.qmd
 bibliography: references.bib
 crossref:
   fig-prefix: Figura
   tbl-prefix: Tabela
   eq-prefix: Equação
+  sec-prefix: Capítulo
 format:
   html:
     theme: cosmo
