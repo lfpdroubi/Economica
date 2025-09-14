@@ -1,5 +1,8 @@
 # Anexo I {.unnumbered}
 
+
+$$C = M\cdot \text{FAC}(i,T)$$ {#eq-FAC}
+
 ```{r, include=FALSE}
 knitr::opts_chunk$set(cache=TRUE, echo=FALSE, fig.pos="H", 
                       fig.path="./img-modelagem/",
@@ -14,6 +17,8 @@ library(knitr)
 ```
 
 ```{r}
+#| label: tbl-FAC1
+#| tbl-cap: Fator de Atualização do Capital (FAC)"
 FAC <- function(i, t) {
   1/(1+i)^t
 }
@@ -28,15 +33,18 @@ for (t in 1:69) {
   }
 }
 fac <- as.data.frame(M)
-colnames(fac) <- c(".165%", ".247%", ".327%", ".407%", ".50%", ".64%", ".72%", 
-                   ".80%", ".87%", ".95%")
-rownames(fac) <- periods
+fac <- cbind(periods, fac)
+colnames(fac) <- c("T/i(%)", ".165%", ".247%", ".327%", ".407%", ".50%", ".64%",
+                   ".72%", ".80%", ".87%", ".95%")
+# rownames(fac) <- periods
 fac |>
-  kable(digits = 4, row.names = T,
-        caption = "Fator de Atualização do Capital (FAC)")
+  kable(digits = 4, row.names = F,
+        format.args = list(decimal.mark = ",", big.mark = "."))
 ```
 
 ```{r}
+#| label: tbl-FAC2
+#| tbl-cap: Fator de Atualização do Capital (FAC)"
 M <- matrix(nrow = 69, ncol = 10)
 for (t in 1:69) {
   for (i in 1:10){
@@ -44,9 +52,10 @@ for (t in 1:69) {
   }
 }
 fac <- as.data.frame(M)
-rownames(fac) <- periods
-colnames(fac) <- c("1%", "2%", "3%", "4%", "5%", "6%", "7%", "8%", "9%", "10%")
+fac <- cbind(periods, fac)
+colnames(fac) <- c("T/i(%)", "1%", "2%", "3%", "4%", "5%", "6%", "7%", "8%", 
+                   "9%", "10%")
 fac |>
-  kable(digits = 4, row.names = T,
-        caption = "Fator de Atualização do Capital (FAC)")
+  kable(digits = 4, row.names = F,
+        format.args = list(decimal.mark = ",", big.mark = "."))
 ```
