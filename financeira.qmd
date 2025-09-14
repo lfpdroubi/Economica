@@ -13,6 +13,21 @@ library(appraiseR)
 ```
 
 ```{r}
+# Fator de Juros Compostos
+FAC <- function(i, t) {
+  (1+i)^t
+}
+# Exemplo: FAC(10%, 24) = 0,1015
+# FAC(.10, 24)
+
+# Fator de Atualiazação do Capital (Descontos Compostos)
+FAC <- function(i, t) {
+  1/(1+i)^t
+}
+# Exemplo: FAC(10%, 24) = 0,1015
+# FAC(.10, 24)
+
+
 # Fator de Recuperação do Capital
 FRC <- function(i, t) {
   i*(1+i)^t/((1+i)^t-1)
@@ -41,12 +56,7 @@ FFA <- function(i, t) {
 # Exemplo: FFA(2%, 35) = 0,02
 # FFA(.02, 35)
 
-# Fator de Atualiazação do Capital
-FAC <- function(i, t) {
-  1/(1+i)^t
-}
-# Exemplo: FAC(10%, 24) = 0,1015
-# FAC(.10, 24)
+
 
 # Fator de Valor Presente Gradiente
 GPW <- function(i,t){

@@ -1,6 +1,6 @@
 # Anexo IV {.unnumbered}
 
-$$M = \text{PMT}\cdot \text{FAcC}$$ {#eq-FAcC}
+$$C = \frac{\text{PMT}}{\text{FRC}(i,T)}$$ {#eq-FRC}
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(cache=TRUE, echo=FALSE, fig.pos="H", 
@@ -15,72 +15,58 @@ library(appraiseR)
 library(knitr)
 ```
 
+
+
 ```{r}
-FAcC <- function(i, t){
-  ((1+i)^t-1)/i
+FRC <- function(i, t) {
+  i*(1+i)^t/((1+i)^t-1)
 }
 ```
 
+
 ```{r}
-periods <- c(1:60, 90, 100, 120, 180, 240)
+periods <- c(1:60, 90, 100, 120, 180, 240, 300, 360)
 j <- c((1+2/100)^(1/12)-1, (1+3/100)^(1/12)-1, (1+4/100)^(1/12)-1, 
        (1+5/100)^(1/12)-1, 0.5/100, (1+8/100)^(1/12)-1, (1+9/100)^(1/12)-1,
        (1+10/100)^(1/12)-1, (1+11/100)^(1/12)-1, (1+12/100)^(1/12)-1)
 ```
 
-
 ```{r}
-#| label: tbl-FAcC
-#| tbl-cap: "Fator de Acumulação Composta (FAcC)."
+#| label: tbl-FRC1
+#| tbl-cap: "Fator de Recuperação do Capital (FRC)."
 n <- length(periods)
 m <- length(j)
 M <- matrix(nrow = n, ncol = m)
 for (t in 1:n) {
   for (i in 1:m){
-    M[t,i] <- FAcC(j[i], periods[t])
+    M[t,i] <- FRC(j[i], periods[t])
   }
 }
-facc <- as.data.frame(M)
-facc <- cbind(periods, facc)
-colnames(facc) <- c("T/i(%)", ".165%", ".247%", ".327%", ".407%", ".50%", 
-                    ".64%", ".72%", ".80%", ".87%", ".95%")
-rownames(facc) <- periods
-facc |>
-  kable(digits = 3, row.names =  F,
+frc <- as.data.frame(M)
+frc <- cbind(periods, frc)
+colnames(frc) <- c("T/i(%)", ".165%", ".247%", ".327%", ".407%", ".50%", ".64%",
+                   ".72%", ".80%", ".87%", ".95%")
+# rownames(frc) <- periods
+frc |>
+  kable(digits = 4, row.names = F,
         format.args = list(decimal.mark = ",", big.mark = "."))
 ```
 
 ```{r}
-#| label: tbl-FAcC2
-#| tbl-cap: "Fator de Acumulação Composta (FAcC)."
+#| label: tbl-FRC2
+#| tbl-cap: "Fator de Recuperação do Capital (FRC)."
 M <- matrix(nrow = n, ncol = 10)
 for (t in 1:n) {
   for (i in 1:10){
-    M[t,i] <- FAcC(i/100, periods[t])
+    M[t,i] <- FRC(i/100, periods[t])
   }
 }
-facc <- as.data.frame(M)
-colnames(facc) <- c("1%", "2%", "3%", "4%", "5%", "6%", "7%", "8%", "9%", "10%")
-rownames(facc) <- periods
-facc |>
-  kable(digits = 3, row.names =  F,
-        format.args = list(decimal.mark = ",", big.mark = "."))
-```
-
-```{r}
-#| label: tbl-FAcC3
-#| tbl-cap: "Fator de Acumulação Composta (FAcC)."
-M <- matrix(nrow = n, ncol = 10)
-for (t in 1:n) {
-  for (i in 1:10){
-    M[t,i] <- FAcC((10+i)/100, periods[t])
-  }
-}
-facc <- as.data.frame(M)
-colnames(facc) <- c("11%", "12%", "13%", "14%", "15%", "16%", "17%", "18%", 
-                    "19%", "20%")
-rownames(facc) <- periods
-facc |>
-  kable(digits = 3, row.names =  F,
+frc <- as.data.frame(M)
+frc <- cbind(periods, frc)
+colnames(frc) <- c("T/i(%)", "1%", "2%", "3%", "4%", "5%", "6%", "7%", "8%",
+                   "9%", "10%")
+# rownames(frc) <- periods
+frc |>
+  kable(digits = 4, row.names = F,
         format.args = list(decimal.mark = ",", big.mark = "."))
 ```

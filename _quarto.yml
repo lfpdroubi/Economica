@@ -18,6 +18,8 @@ book:
     - anexo_III.qmd
     - anexo_IV.qmd
     - anexo_V.qmd
+    - anexo_VI.qmd
+    - anexo_VII.qmd
 bibliography: references.bib
 lang: pt
 crossref:

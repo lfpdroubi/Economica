@@ -1,6 +1,7 @@
 # Anexo III {.unnumbered}
 
-$$C = \text{PMT}\cdot \text{FVP}(i,T)$$ {#eq-FVP}
+
+$$C = M\cdot \text{CPW}(i,T) = M\cdot \frac{i}{\ln(1 + i)} \frac{1}{(1+i)^T}$$ {#eq-PW}
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(cache=TRUE, echo=FALSE, fig.pos="H", 
@@ -16,10 +17,11 @@ library(knitr)
 ```
 
 ```{r}
-FVP <- function(i, t) {
-  ((1+i)^t-1)/(i*(1+i)^t)
+CPW <- function(i, t) {
+  i/log(1+i)*1/(1+i)^t
 }
 ```
+
 
 ```{r}
 periods <- c(1:60, 90, 100, 120, 180, 240, 300, 360)
@@ -29,42 +31,42 @@ j <- c((1+2/100)^(1/12)-1, (1+3/100)^(1/12)-1, (1+4/100)^(1/12)-1,
 ```
 
 
+
 ```{r}
-#| label: tbl-FVP
-#| tbl-cap: "Fator de Valor Presente (FVP)"
+#| label: tbl-CPW1
+#| tbl-cap: "Fator de Atualização Contínua do Capital (CPW)."
 n <- length(periods)
 m <- length(j)
 M <- matrix(nrow = n, ncol = m)
 for (t in 1:n) {
   for (i in 1:m){
-    M[t,i] <- FVP(j[i], periods[t])
+    M[t,i] <- CPW(j[i], periods[t])
   }
 }
-fvp <- as.data.frame(M)
-fvp <- cbind(periods, fvp)
-colnames(fvp) <- c("T/i(%)", ".165%", ".247%", ".327%", ".407%", ".50%", ".64%", ".72%", 
-                   ".80%", ".87%", ".95%")
-# rownames(fvp) <- periods
-fvp |>
-  kable(digits = 3, row.names = F,
+cpw <- as.data.frame(M)
+cpw <- cbind(periods, cpw)
+colnames(cpw) <- c("T/i(%)", ".165%", ".247%", ".327%", ".407%", ".50%", ".64%",
+                   ".72%", ".80%", ".87%", ".95%")
+# rownames(fac) <- periods
+cpw |>
+  kable(digits = 4, row.names = F,
         format.args = list(decimal.mark = ",", big.mark = "."))
 ```
 
 ```{r}
-#| label: tbl-FVP2
-#| tbl-cap: "Fator de Valor Presente (FVP)"
+#| label: tbl-CPW2
+#| tbl-cap: "Fator de Atualização Contínua do Capital (CPW)."
 M <- matrix(nrow = n, ncol = 10)
 for (t in 1:n) {
   for (i in 1:10){
-    M[t,i] <- FVP(i/100, periods[t])
+    M[t,i] <- CPW(i/100, periods[t])
   }
 }
-fvp <- as.data.frame(M)
-fvp <- cbind(periods, fvp)
-colnames(fvp) <- c("T/i(%)", "1%", "2%", "3%", "4%", "5%", "6%", "7%", "8%", 
+cpw <- as.data.frame(M)
+cpw <- cbind(periods, cpw)
+colnames(cpw) <- c("T/i(%)", "1%", "2%", "3%", "4%", "5%", "6%", "7%", "8%", 
                    "9%", "10%")
-# rownames(fvp) <- periods
-fvp |>
-  kable(digits = 3, row.names = F,
+cpw |>
+  kable(digits = 4, row.names = F,
         format.args = list(decimal.mark = ",", big.mark = "."))
 ```

@@ -228,6 +228,18 @@ window.Quarto = {
  <span class="menu-text">Anexo V</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./anexo_VI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Anexo VI</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./anexo_VII.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Anexo VII</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -329,7 +341,7 @@ M = C.(1+i)^t
 M = 1000.(1+0,5\%)^3 = 1.015,075
 \]</span></p>
 <p>Para curtos períodos e baixas taxas de juros, como as do exemplo, não faz muita diferença o cálculo com juros compostos ou simples. Com juros simples, o saldo final obtido para o terceiro período seria de R$ 1.015,00, uma diferença de apenas 7 centavos. No entanto, para um prazo maior, por exemplo, de 60 meses, o saldo final da caderneta de poupança com aplicação inicial de R$ 1.000,00 será de R$ 1.348,85. Se o saldo da caderneta de poupança fosse calculado com juros simples este saldo após 60 meses seria de, apenas, R$ 1.300,00, uma diferença significativa em relação ao valor real, calculado com juros compostos.</p>
-<p>Assim como é possível obter o montante <span class="math inline">\(M\)</span> através de um Capital <span class="math inline">\(C\)</span> e uma taxa de juros, também é possível saber qual o capital necessário para obter, após alguns períodos, um determinado montante, a uma taxa de juros fixa. Suponha que um investidor tenha que honrar uma parcela com vencimento num prazo de 6 meses, de valor igual a R$ 20.000,00. Ele pretende alocar o seu capital em investimentos de mais longo prazo, mas ele precisa reservar um valor numa aplicação de mais curto prazo, que ele possa sacar daqui a 6 meses, para pagar a parcela devida. Suponha que o investidor pretenda deixar apenas o recurso necessário para o pagamento desta parcela na caderneta de poupança, qual o valor do capital que ele precisa alocar na data de hoje, para que ele tenha exatamente R$ 20.000,00 daqui a seis meses? Para isto, ele pode utilizar a <a href="anexo_I.html#eq-FAC" class="quarto-xref">Equação&nbsp;<span>1</span></a>:</p>
+<p>Assim como é possível obter o montante <span class="math inline">\(M\)</span> através de um Capital <span class="math inline">\(C\)</span> e uma taxa de juros, também é possível saber qual o capital necessário para obter, após alguns períodos, um determinado montante, a uma taxa de juros fixa. Suponha que um investidor tenha que honrar uma parcela com vencimento num prazo de 6 meses, de valor igual a R$ 20.000,00. Ele pretende alocar o seu capital em investimentos de mais longo prazo, mas ele precisa reservar um valor numa aplicação de mais curto prazo, que ele possa sacar daqui a 6 meses, para pagar a parcela devida. Suponha que o investidor pretenda deixar apenas o recurso necessário para o pagamento desta parcela na caderneta de poupança, qual o valor do capital que ele precisa alocar na data de hoje, para que ele tenha exatamente R$ 20.000,00 daqui a seis meses? Para isto, ele pode utilizar a <a href="#eq-FAC" class="quarto-xref">Equação&nbsp;<span>2.3</span></a>:</p>
 <p><span id="eq-FAC"><span class="math display">\[
 C = M.\frac{1}{(1+i)^t}
 \tag{2.3}\]</span></span></p>
@@ -394,7 +406,7 @@ P = C.\text{FRC}(3\%,12) = 400.000 \times 0,1005 = \text{R\$ }40.200,00
 <p>O Fluxo de Caixa final do empréstimo pode ser visto na <a href="#fig-FC" class="quarto-xref">Figura&nbsp;<span>2.1</span></a>:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-FC" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-pos="H">
+<div id="fig-FC" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="./img-modelagem/fig-FC-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-pos="H">
@@ -444,7 +456,7 @@ C &amp;= P.\text{FVP}(i\%, t) \\
 \text{FVP}(i\%, 10) &amp;= 9,50 \\
 \end{split}
 \end{aligned}
-\]</span> Encontrado o valor de FVP para o período de 12 meses (9,50), basta procurar na tabela do [Anexo III] o valor mais próximo deste. Pesquisando na <a href="anexo_III.html#tbl-FVP" class="quarto-xref">Tabela&nbsp;<span>1</span></a>, na linha de 10 períodos, encontramos o valor 9,497 (muito próximo) na coluna da taxa igual a 0,95% a.m., o que equivale a uma taxa anual de 12% a.a.</p>
+\]</span> Encontrado o valor de FVP para o período de 12 meses (9,50), basta procurar na tabela do [Anexo III] o valor mais próximo deste. Pesquisando na <a href="anexo_V.html#tbl-FVP" class="quarto-xref">Tabela&nbsp;<span>1</span></a>, na linha de 10 períodos, encontramos o valor 9,497 (muito próximo) na coluna da taxa igual a 0,95% a.m., o que equivale a uma taxa anual de 12% a.a.</p>
 <p>Quanto maior o “desconto” no PIX, maior a taxa, naturalmente. Veja este exemplo: um <em>smartphone</em> anunciado por R$ 2.998,89, que pode ser parcelado “sem juros” em 10 parcelas de 299,89, porém pode também ser pago via PIX por R$ 2.699,00, um “desconto” de 10%. Vamos calcular os juros embutidos:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -454,7 +466,7 @@ C &amp;= P.\text{FVP}(i\%, t) \\
 \text{FVP}(i\%, 10) &amp;= 9,0 \\
 \end{split}
 \end{aligned}
-\]</span> Pesquisando na <a href="anexo_III.html#tbl-FVP" class="quarto-xref">Tabela&nbsp;<span>1</span></a>, na linha de 10 períodos, encontra-se que a taxa de juros é um pouco menor do que 2% a.m., o equivalente a uma taxa de juros anual de 26,82% a.a.!!!</p>
+\]</span> Pesquisando na <a href="anexo_V.html#tbl-FVP" class="quarto-xref">Tabela&nbsp;<span>1</span></a>, na linha de 10 períodos, encontra-se que a taxa de juros é um pouco menor do que 2% a.m., o equivalente a uma taxa de juros anual de 26,82% a.a.!!!</p>
 </div>
 </div>
 <section id="fundo-de-amortização" class="level3" data-number="2.4.1">
@@ -572,7 +584,7 @@ PV = \frac{1}{i(1+i)^t} \left [ A[(i+1)^t-1] + G \left ( \frac{(1+i)^t-1}{i} - t
 <p>O fluxo de caixa deste financiamento pode ser visto na Figura <a href="#fig-FCGradientePA" class="quarto-xref">Figura&nbsp;<span>2.2</span></a></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-FCGradientePA" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-pos="H">
+<div id="fig-FCGradientePA" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FCGradientePA-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="./img-modelagem/fig-FCGradientePA-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-pos="H">
@@ -669,7 +681,7 @@ PV = \frac{A_1}{(1+i)^t} \left[ \frac{g^t-(1+i)^t}{g-(1+i)} \right]
 <p>O Diagrama de um Fluxo de Caixa de uma série de pagamentos com crescimento em PG tem a forma da <a href="#fig-FCGradientePG" class="quarto-xref">Figura&nbsp;<span>2.3</span></a>:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-FCGradientePG" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-fig-pos="H">
+<div id="fig-FCGradientePG" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-pos="H" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-FCGradientePG-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="./img-modelagem/fig-FCGradientePG-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" data-fig-pos="H">
